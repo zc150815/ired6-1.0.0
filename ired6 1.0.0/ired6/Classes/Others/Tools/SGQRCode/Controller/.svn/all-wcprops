@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/ired6/!svn/ver/104/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/SGQRCode/Controller
+END
+SGGenerateQRCodeVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/ired6/!svn/ver/33/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/SGQRCode/Controller/SGGenerateQRCodeVC.h
+END
+SGGenerateQRCodeVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/ired6/!svn/ver/33/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/SGQRCode/Controller/SGGenerateQRCodeVC.m
+END
+SGScanningQRCodeVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/ired6/!svn/ver/33/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/SGQRCode/Controller/SGScanningQRCodeVC.h
+END
+ScanSuccessJumpVC.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/ired6/!svn/ver/33/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/SGQRCode/Controller/ScanSuccessJumpVC.h
+END
+SGScanningQRCodeVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/ired6/!svn/ver/104/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/SGQRCode/Controller/SGScanningQRCodeVC.m
+END
+ScanSuccessJumpVC.m
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/ired6/!svn/ver/33/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/SGQRCode/Controller/ScanSuccessJumpVC.m
+END

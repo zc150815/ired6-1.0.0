@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ired6/!svn/ver/177/dev/ios/branches/ired6%201.0.0/ired6/Classes/Main/Controllers
+END
+SQLocationViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/ired6/!svn/ver/33/dev/ios/branches/ired6%201.0.0/ired6/Classes/Main/Controllers/SQLocationViewController.h
+END
+SQLoginViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/ired6/!svn/ver/33/dev/ios/branches/ired6%201.0.0/ired6/Classes/Main/Controllers/SQLoginViewController.h
+END
+SQNavigationController.m
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/ired6/!svn/ver/181/dev/ios/branches/ired6%201.0.0/ired6/Classes/Main/Controllers/SQNavigationController.m
+END
+SQLocationViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/ired6/!svn/ver/176/dev/ios/branches/ired6%201.0.0/ired6/Classes/Main/Controllers/SQLocationViewController.m
+END
+SQLoginViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/ired6/!svn/ver/104/dev/ios/branches/ired6%201.0.0/ired6/Classes/Main/Controllers/SQLoginViewController.m
+END
+SQWebViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/ired6/!svn/ver/176/dev/ios/branches/ired6%201.0.0/ired6/Classes/Main/Controllers/SQWebViewController.h
+END
+SQTabBarController.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/ired6/!svn/ver/33/dev/ios/branches/ired6%201.0.0/ired6/Classes/Main/Controllers/SQTabBarController.h
+END
+SQWebViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/ired6/!svn/ver/176/dev/ios/branches/ired6%201.0.0/ired6/Classes/Main/Controllers/SQWebViewController.m
+END
+SQNavigationController.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/ired6/!svn/ver/33/dev/ios/branches/ired6%201.0.0/ired6/Classes/Main/Controllers/SQNavigationController.h
+END
+SQTabBarController.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/ired6/!svn/ver/104/dev/ios/branches/ired6%201.0.0/ired6/Classes/Main/Controllers/SQTabBarController.m
+END

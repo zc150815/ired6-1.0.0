@@ -1,0 +1,10 @@
+{
+    "code":200,
+    "msg":"success",
+    "data":{
+        "content":"http://p1.bqimg.com/567571/4ce1a4c844b09201.gif",
+        "openUrl":"http://www.baidu.com",
+        "contentSize":"750*1334",
+        "duration":5,
+    }
+}

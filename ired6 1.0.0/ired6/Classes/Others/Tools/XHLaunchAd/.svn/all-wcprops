@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ired6/!svn/ver/176/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd
+END
+UIImage+XHLaunchAd.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/UIImage+XHLaunchAd.h
+END
+XHLaunchAdDownloader.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdDownloader.h
+END
+UIImage+XHLaunchAd.m
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/UIImage+XHLaunchAd.m
+END
+XHLaunchAdCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdCache.h
+END
+XHLaunchAdDownloader.m
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdDownloader.m
+END
+XHLaunchAdDownload.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdDownload.h
+END
+XHLaunchAdConfiguration.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdConfiguration.h
+END
+XHLaunchAdCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdCache.m
+END
+XHLaunchImageView.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchImageView.h
+END
+UIImageView+XHLaunchAdCache.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/UIImageView+XHLaunchAdCache.h
+END
+XHLaunchAdView.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdView.h
+END
+XHLaunchAdButton.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdButton.h
+END
+XHLaunchAdConfiguration.m
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdConfiguration.m
+END
+XHLaunchAdDownload.m
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdDownload.m
+END
+XHLaunchAdImageManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdImageManager.h
+END
+XHLaunchImageView.m
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchImageView.m
+END
+XHLaunchAd.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/ired6/!svn/ver/176/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAd.h
+END
+UIImageView+XHLaunchAdCache.m
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/UIImageView+XHLaunchAdCache.m
+END
+XHLaunchAdView.m
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdView.m
+END
+XHLaunchAdButton.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdButton.m
+END
+NSString+XHLaunchAd.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/NSString+XHLaunchAd.h
+END
+XHLaunchAdImageManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAdImageManager.m
+END
+XHLaunchAd.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/XHLaunchAd.m
+END
+NSString+XHLaunchAd.m
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/ired6/!svn/ver/123/dev/ios/branches/ired6%201.0.0/ired6/Classes/Others/Tools/XHLaunchAd/NSString+XHLaunchAd.m
+END

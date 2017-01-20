@@ -1,0 +1,10 @@
+{
+    "code":200,
+    "msg":"success",
+    "data":{
+        "content":"http://d.hiphotos.baidu.com/image/pic/item/64380cd7912397dd624a32175082b2b7d0a287f6.jpg",
+        "openUrl":"http://www.baidu.com",
+        "contentSize":"750*1334",
+        "duration":5,
+    }
+}
