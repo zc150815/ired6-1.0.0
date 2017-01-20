@@ -11,9 +11,11 @@
 
 @interface SQLocationViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) UIButton *detailAddress;
-@property (nonatomic, strong) UIView *coverView;
-@property (nonatomic, strong) UIButton *cityBtn;
+@property (nonatomic, strong) UIButton *detailAddress; //当前位置
+@property (nonatomic, strong) UIView *coverView;        //已开通城市页面
+@property (nonatomic, strong) UIButton *cityBtn;        //当前城市
+
+@property (nonatomic, strong) NSArray *dataArr;
 
 @end
 
@@ -21,14 +23,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self loadData];
+    [self setupUI];
+}
+-(void)loadData{
+    
+    self.dataArr = @[@"紫竹院路31号3号公寓",@"华澳中心公寓",@"美林花园",@"无线电小区",@"紫竹花园",@"紫竹院路小区",@"北洼路4号院",@"紫竹院路31号1号公寓",@"昌运宫9号院",@"紫竹花园F座",@"车道沟东里",@"喜到家健康社区(紫竹院店)",@"车道沟东路4号院"];
+}
+-(void)setupUI{
+    
     self.title = @"小区选择";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self setupUI];
-}
--(void)setupUI{
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
     //城市选择按钮
     UIButton *cityBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [cityBtn setTitle:[defaults objectForKey:CityName] forState:UIControlStateNormal];
@@ -82,14 +90,14 @@
 #pragma mark
 #pragma mark TableviewDelegate代理方法
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 100;
+    return self.dataArr.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendTableViewID" forIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = [NSString stringWithFormat:@"第%zd号小区",indexPath.row];
+    cell.textLabel.text = self.dataArr[indexPath.row];
     cell.textLabel.font = SQ_Font(SQ_Fit(16));
     return cell;
 }
@@ -98,10 +106,10 @@
     
     NSString *selectedStr =[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
     if ([self.delegate respondsToSelector:@selector(locationView:withLocationStr:)]) {
-        [self.delegate locationView:self withLocationStr:selectedStr];
+//        [self.delegate locationView:self withLocationStr:selectedStr];
+        [self.delegate locationView:self withLocationStr:self.dataArr[indexPath.row]];
     }
     [self.navigationController popViewControllerAnimated:YES];
-    
     
     if ([self.delegate isKindOfClass:[SQNavigationController class]]) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

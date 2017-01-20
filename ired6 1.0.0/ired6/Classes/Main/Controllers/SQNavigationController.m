@@ -43,7 +43,7 @@
     bar.translucent = NO;
     bar.shadowImage = [UIImage alloc];
     bar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor getColor:@"FFFFFF"],
-                                NSFontAttributeName:SQ_Font(18)};
+                                NSFontAttributeName:SQ_Font(17)};
 }
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{

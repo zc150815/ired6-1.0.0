@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class SQAttestListModel;
 @interface SQHousingCertificationController : UIViewController
 
 @property (nonatomic,assign) BOOL canEdit;
 
+@property (nonatomic, strong) SQAttestListModel *model;
 
 
 @end

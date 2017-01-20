@@ -74,16 +74,16 @@ static SQPublicTools* _instanceType;
     label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];
-    label.font = SQ_Font(15);
+    label.font = SQ_Font(SQ_Fit(15));
     label.x = SQ_BaseMargin;label.y = SQ_BaseMargin/2;
     [label sizeToFit];
     
     [showview addSubview:label];
-    showview.center = window.center;
+    showview.center = CGPointMake(window.centerX, window.height*3/4);
     showview.bounds = CGRectMake(0, 0, label.width+SQ_BaseMargin*2, label.height+SQ_BaseMargin);
 
     [UIView animateWithDuration:time/2 animations:^{
-        showview.alpha = 0.5;
+        showview.alpha = 0.7;
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:time/2 animations:^{
             showview.alpha = 0;

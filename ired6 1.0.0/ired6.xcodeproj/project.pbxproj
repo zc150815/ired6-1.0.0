@@ -80,6 +80,9 @@
 		67E942C81E2716C1007D5637 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 67E942BD1E2716C1007D5637 /* sound.caf */; };
 		67E942C91E2716C1007D5637 /* SGQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E942C01E2716C1007D5637 /* SGQRCodeTool.m */; };
 		67E942CA1E2716C1007D5637 /* SGScanningQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E942C31E2716C1007D5637 /* SGScanningQRCodeView.m */; };
+		67EB81C81E31A7CE00B8D2E8 /* SQAttestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB81C71E31A7CE00B8D2E8 /* SQAttestCell.m */; };
+		67EB81CB1E31AB1F00B8D2E8 /* SQAttestListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB81CA1E31AB1F00B8D2E8 /* SQAttestListModel.m */; };
+		67EB81CE1E31E5BB00B8D2E8 /* SQCertificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB81CD1E31E5BB00B8D2E8 /* SQCertificationModel.m */; };
 		D14B3707F21A3421ACAD1312 /* libPods-ired6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A56DE935A44A17715BA1154 /* libPods-ired6.a */; };
 /* End PBXBuildFile section */
 
@@ -218,6 +221,12 @@
 		67E942C01E2716C1007D5637 /* SGQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGQRCodeTool.m; sourceTree = "<group>"; };
 		67E942C21E2716C1007D5637 /* SGScanningQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGScanningQRCodeView.h; sourceTree = "<group>"; };
 		67E942C31E2716C1007D5637 /* SGScanningQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGScanningQRCodeView.m; sourceTree = "<group>"; };
+		67EB81C61E31A7CE00B8D2E8 /* SQAttestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQAttestCell.h; sourceTree = "<group>"; };
+		67EB81C71E31A7CE00B8D2E8 /* SQAttestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQAttestCell.m; sourceTree = "<group>"; };
+		67EB81C91E31AB1F00B8D2E8 /* SQAttestListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQAttestListModel.h; sourceTree = "<group>"; };
+		67EB81CA1E31AB1F00B8D2E8 /* SQAttestListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQAttestListModel.m; sourceTree = "<group>"; };
+		67EB81CC1E31E5BB00B8D2E8 /* SQCertificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQCertificationModel.h; sourceTree = "<group>"; };
+		67EB81CD1E31E5BB00B8D2E8 /* SQCertificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQCertificationModel.m; sourceTree = "<group>"; };
 		A95F02B94ED7DC722E6ED04E /* Pods-ired6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ired6.release.xcconfig"; path = "Pods/Target Support Files/Pods-ired6/Pods-ired6.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -430,6 +439,10 @@
 		671BFB251E23367B0030DAC9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				67EB81C91E31AB1F00B8D2E8 /* SQAttestListModel.h */,
+				67EB81CA1E31AB1F00B8D2E8 /* SQAttestListModel.m */,
+				67EB81CC1E31E5BB00B8D2E8 /* SQCertificationModel.h */,
+				67EB81CD1E31E5BB00B8D2E8 /* SQCertificationModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -437,6 +450,8 @@
 		671BFB261E23367B0030DAC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				67EB81C61E31A7CE00B8D2E8 /* SQAttestCell.h */,
+				67EB81C71E31A7CE00B8D2E8 /* SQAttestCell.m */,
 				6730A2281E30542500616C70 /* SQCertificationCell.h */,
 				6730A2291E30542500616C70 /* SQCertificationCell.m */,
 			);
@@ -869,6 +884,7 @@
 				671BFB561E2338D50030DAC9 /* UILabel+ZCExtension.m in Sources */,
 				674573461E28634E00421D76 /* SQLocationViewController.m in Sources */,
 				671BFB521E2338D50030DAC9 /* NSString+Hash.m in Sources */,
+				67EB81C81E31A7CE00B8D2E8 /* SQAttestCell.m in Sources */,
 				6790C5FF1E270B61007F4237 /* SQNetworkingTools.m in Sources */,
 				675658C71E2F597500B24595 /* AppDelegate+SQLaunchAd.m in Sources */,
 				671BFB501E2338D50030DAC9 /* Foundation+Log.m in Sources */,
@@ -901,6 +917,7 @@
 				671BFB011E232D260030DAC9 /* main.m in Sources */,
 				6730A2271E30506800616C70 /* SQHousingCertificationController.m in Sources */,
 				6767AECA1E2E1C9500822AD9 /* NSString+XHLaunchAd.m in Sources */,
+				67EB81CB1E31AB1F00B8D2E8 /* SQAttestListModel.m in Sources */,
 				6790C5ED1E24B975007F4237 /* MMMaterialDesignSpinner.m in Sources */,
 				671BFB531E2338D50030DAC9 /* UIBarButtonItem+ZCExtension.m in Sources */,
 				67E942CA1E2716C1007D5637 /* SGScanningQRCodeView.m in Sources */,
@@ -914,6 +931,7 @@
 				6790C5FC1E2607FF007F4237 /* SQLoginView.m in Sources */,
 				6730A22A1E30542500616C70 /* SQCertificationCell.m in Sources */,
 				672602EA1E2E22740078031C /* LaunchAdModel.m in Sources */,
+				67EB81CE1E31E5BB00B8D2E8 /* SQCertificationModel.m in Sources */,
 				6730A2241E30505300616C70 /* SQIdentityCertificationController.m in Sources */,
 				674573491E28BD6500421D76 /* SQAttestViewController.m in Sources */,
 				67E942C51E2716C1007D5637 /* SGGenerateQRCodeVC.m in Sources */,

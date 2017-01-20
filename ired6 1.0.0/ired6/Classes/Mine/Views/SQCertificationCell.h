@@ -8,15 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class SQCertificationModel;
 @interface SQCertificationCell : UITableViewCell
 
-
-@property (nonatomic,assign) BOOL canSelected;
-
-@property (nonatomic,assign) BOOL canPush;
-
-
-@property (nonatomic,copy) NSString *testStr;
-@property (nonatomic,copy) NSString *testDetail;
+@property (nonatomic, strong) SQCertificationModel *model;
 
 @end
