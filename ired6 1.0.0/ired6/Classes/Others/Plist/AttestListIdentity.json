@@ -1,0 +1,8 @@
+{
+    "success": "1",
+    "data":[
+             {"isAttested":"1","titleStr":"实名认证","additionalStr":"姓名:张洋"},
+             {"isAttested":"0","titleStr":"社区管理","additionalStr":"负责区域:华澳中心小区"}
+            ];
+
+}

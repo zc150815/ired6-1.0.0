@@ -37,7 +37,6 @@
 		674573461E28634E00421D76 /* SQLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 674573451E28634E00421D76 /* SQLocationViewController.m */; };
 		674573491E28BD6500421D76 /* SQAttestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 674573481E28BD6500421D76 /* SQAttestViewController.m */; };
 		6745735D1E2B2FAE00421D76 /* ZCKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 674573591E2B2FAE00421D76 /* ZCKeyboard.m */; };
-		674573621E2CB72000421D76 /* xiaoquxuanze.plist in Resources */ = {isa = PBXBuildFile; fileRef = 674573611E2CB72000421D76 /* xiaoquxuanze.plist */; };
 		675658C71E2F597500B24595 /* AppDelegate+SQLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 675658C61E2F597500B24595 /* AppDelegate+SQLaunchAd.m */; };
 		6767AECA1E2E1C9500822AD9 /* NSString+XHLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767AEB31E2E1C9500822AD9 /* NSString+XHLaunchAd.m */; };
 		6767AECB1E2E1C9500822AD9 /* UIImage+XHLaunchAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6767AEB51E2E1C9500822AD9 /* UIImage+XHLaunchAd.m */; };
@@ -85,6 +84,16 @@
 		67EB81DA1E33451600B8D2E8 /* SQIdentityCertificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB81D91E33451600B8D2E8 /* SQIdentityCertificationCell.m */; };
 		67EB81DF1E335FE000B8D2E8 /* SQHousingMemberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB81DE1E335FE000B8D2E8 /* SQHousingMemberController.m */; };
 		67EB81E21E33617100B8D2E8 /* SQHousingMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB81E11E33617100B8D2E8 /* SQHousingMemberCell.m */; };
+		67EB81FB1E345D6300B8D2E8 /* HousingCertification.json in Resources */ = {isa = PBXBuildFile; fileRef = 67EB81F81E345D6300B8D2E8 /* HousingCertification.json */; };
+		67EB81FC1E345D6300B8D2E8 /* AttestListHouse.json in Resources */ = {isa = PBXBuildFile; fileRef = 67EB81F91E345D6300B8D2E8 /* AttestListHouse.json */; };
+		67EB81FD1E345D6300B8D2E8 /* AttestListIdentity.json in Resources */ = {isa = PBXBuildFile; fileRef = 67EB81FA1E345D6300B8D2E8 /* AttestListIdentity.json */; };
+		67EB81FF1E345D8100B8D2E8 /* AttestListHouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67EB81FE1E345D8100B8D2E8 /* AttestListHouse.plist */; };
+		67EB82011E345F9B00B8D2E8 /* AttestListIdentity.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67EB82001E345F9B00B8D2E8 /* AttestListIdentity.plist */; };
+		67EB82031E34612F00B8D2E8 /* HousingCertification.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67EB82021E34612F00B8D2E8 /* HousingCertification.plist */; };
+		67EB82051E34676100B8D2E8 /* IdentityCertification.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67EB82041E34676100B8D2E8 /* IdentityCertification.plist */; };
+		67EB82071E34679100B8D2E8 /* IdentityCertification.json in Resources */ = {isa = PBXBuildFile; fileRef = 67EB82061E34679100B8D2E8 /* IdentityCertification.json */; };
+		67EB820A1E346A2500B8D2E8 /* SQHouseCertificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB82091E346A2500B8D2E8 /* SQHouseCertificationModel.m */; };
+		67EB820D1E346A6900B8D2E8 /* SQIdentityCertificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB820C1E346A6900B8D2E8 /* SQIdentityCertificationModel.m */; };
 		D14B3707F21A3421ACAD1312 /* libPods-ired6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A56DE935A44A17715BA1154 /* libPods-ired6.a */; };
 /* End PBXBuildFile section */
 
@@ -150,7 +159,6 @@
 		674573481E28BD6500421D76 /* SQAttestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQAttestViewController.m; sourceTree = "<group>"; };
 		674573581E2B2FAE00421D76 /* ZCKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCKeyboard.h; sourceTree = "<group>"; };
 		674573591E2B2FAE00421D76 /* ZCKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCKeyboard.m; sourceTree = "<group>"; };
-		674573611E2CB72000421D76 /* xiaoquxuanze.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = xiaoquxuanze.plist; sourceTree = "<group>"; };
 		675658C51E2F597500B24595 /* AppDelegate+SQLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SQLaunchAd.h"; sourceTree = "<group>"; };
 		675658C61E2F597500B24595 /* AppDelegate+SQLaunchAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SQLaunchAd.m"; sourceTree = "<group>"; };
 		6767AEB21E2E1C9500822AD9 /* NSString+XHLaunchAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XHLaunchAd.h"; sourceTree = "<group>"; };
@@ -233,6 +241,18 @@
 		67EB81DE1E335FE000B8D2E8 /* SQHousingMemberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQHousingMemberController.m; sourceTree = "<group>"; };
 		67EB81E01E33617100B8D2E8 /* SQHousingMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQHousingMemberCell.h; sourceTree = "<group>"; };
 		67EB81E11E33617100B8D2E8 /* SQHousingMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQHousingMemberCell.m; sourceTree = "<group>"; };
+		67EB81F81E345D6300B8D2E8 /* HousingCertification.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HousingCertification.json; sourceTree = "<group>"; };
+		67EB81F91E345D6300B8D2E8 /* AttestListHouse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AttestListHouse.json; sourceTree = "<group>"; };
+		67EB81FA1E345D6300B8D2E8 /* AttestListIdentity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AttestListIdentity.json; sourceTree = "<group>"; };
+		67EB81FE1E345D8100B8D2E8 /* AttestListHouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AttestListHouse.plist; sourceTree = "<group>"; };
+		67EB82001E345F9B00B8D2E8 /* AttestListIdentity.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AttestListIdentity.plist; sourceTree = "<group>"; };
+		67EB82021E34612F00B8D2E8 /* HousingCertification.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HousingCertification.plist; sourceTree = "<group>"; };
+		67EB82041E34676100B8D2E8 /* IdentityCertification.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IdentityCertification.plist; sourceTree = "<group>"; };
+		67EB82061E34679100B8D2E8 /* IdentityCertification.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = IdentityCertification.json; sourceTree = "<group>"; };
+		67EB82081E346A2500B8D2E8 /* SQHouseCertificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQHouseCertificationModel.h; sourceTree = "<group>"; };
+		67EB82091E346A2500B8D2E8 /* SQHouseCertificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQHouseCertificationModel.m; sourceTree = "<group>"; };
+		67EB820B1E346A6900B8D2E8 /* SQIdentityCertificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQIdentityCertificationModel.h; sourceTree = "<group>"; };
+		67EB820C1E346A6900B8D2E8 /* SQIdentityCertificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQIdentityCertificationModel.m; sourceTree = "<group>"; };
 		A95F02B94ED7DC722E6ED04E /* Pods-ired6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ired6.release.xcconfig"; path = "Pods/Target Support Files/Pods-ired6/Pods-ired6.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -574,7 +594,14 @@
 		6745735E1E2C9B8E00421D76 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
-				674573611E2CB72000421D76 /* xiaoquxuanze.plist */,
+				67EB81FE1E345D8100B8D2E8 /* AttestListHouse.plist */,
+				67EB81F91E345D6300B8D2E8 /* AttestListHouse.json */,
+				67EB82001E345F9B00B8D2E8 /* AttestListIdentity.plist */,
+				67EB81FA1E345D6300B8D2E8 /* AttestListIdentity.json */,
+				67EB81F81E345D6300B8D2E8 /* HousingCertification.json */,
+				67EB82021E34612F00B8D2E8 /* HousingCertification.plist */,
+				67EB82041E34676100B8D2E8 /* IdentityCertification.plist */,
+				67EB82061E34679100B8D2E8 /* IdentityCertification.json */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -729,6 +756,10 @@
 			children = (
 				67EB81C91E31AB1F00B8D2E8 /* SQAttestListModel.h */,
 				67EB81CA1E31AB1F00B8D2E8 /* SQAttestListModel.m */,
+				67EB82081E346A2500B8D2E8 /* SQHouseCertificationModel.h */,
+				67EB82091E346A2500B8D2E8 /* SQHouseCertificationModel.m */,
+				67EB820B1E346A6900B8D2E8 /* SQIdentityCertificationModel.h */,
+				67EB820C1E346A6900B8D2E8 /* SQIdentityCertificationModel.m */,
 				67EB81CC1E31E5BB00B8D2E8 /* SQCertificationModel.h */,
 				67EB81CD1E31E5BB00B8D2E8 /* SQCertificationModel.m */,
 			);
@@ -830,21 +861,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67EB81FB1E345D6300B8D2E8 /* HousingCertification.json in Resources */,
+				67EB81FF1E345D8100B8D2E8 /* AttestListHouse.plist in Resources */,
 				6767AEEF1E2E1E5C00822AD9 /* image1.jpg in Resources */,
 				6767AEF81E2E1E5C00822AD9 /* video1.mp4 in Resources */,
 				6767AEEE1E2E1E5C00822AD9 /* image0.jpg in Resources */,
 				671BFB0C1E232D260030DAC9 /* Assets.xcassets in Resources */,
 				67E942C81E2716C1007D5637 /* sound.caf in Resources */,
+				67EB81FD1E345D6300B8D2E8 /* AttestListIdentity.json in Resources */,
+				67EB82071E34679100B8D2E8 /* IdentityCertification.json in Resources */,
 				6767AEF01E2E1E5C00822AD9 /* image11.gif in Resources */,
+				67EB82031E34612F00B8D2E8 /* HousingCertification.plist in Resources */,
 				6767AEF11E2E1E5C00822AD9 /* image12.gif in Resources */,
+				67EB81FC1E345D6300B8D2E8 /* AttestListHouse.json in Resources */,
 				6767AEF51E2E1E5C00822AD9 /* LaunchImageAd.json in Resources */,
 				6767AEF31E2E1E5C00822AD9 /* image3.jpg in Resources */,
 				6767AEF21E2E1E5C00822AD9 /* image2.jpg in Resources */,
 				6767AEF61E2E1E5C00822AD9 /* LaunchVideoAd.json in Resources */,
+				67EB82011E345F9B00B8D2E8 /* AttestListIdentity.plist in Resources */,
 				6767AEF41E2E1E5C00822AD9 /* image4.jpg in Resources */,
 				671BFB0A1E232D260030DAC9 /* Main.storyboard in Resources */,
 				6767AEF71E2E1E5C00822AD9 /* video0.mp4 in Resources */,
-				674573621E2CB72000421D76 /* xiaoquxuanze.plist in Resources */,
+				67EB82051E34676100B8D2E8 /* IdentityCertification.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,11 +960,13 @@
 				67E942C41E2716C1007D5637 /* ScanSuccessJumpVC.m in Sources */,
 				6767AED21E2E1C9500822AD9 /* XHLaunchAdDownloader.m in Sources */,
 				671BFB041E232D260030DAC9 /* AppDelegate.m in Sources */,
+				67EB820A1E346A2500B8D2E8 /* SQHouseCertificationModel.m in Sources */,
 				6790C5F01E24BB9F007F4237 /* UIColor+ZCExtension.m in Sources */,
 				671BFB581E2338D50030DAC9 /* UIView+ZCExtension.m in Sources */,
 				672602E71E2E22550078031C /* AppDelegate+XHLaunchAd.m in Sources */,
 				6767AED31E2E1C9500822AD9 /* XHLaunchAdImageManager.m in Sources */,
 				671BFB371E2337D50030DAC9 /* SQLifeViewController.m in Sources */,
+				67EB820D1E346A6900B8D2E8 /* SQIdentityCertificationModel.m in Sources */,
 				6767AECD1E2E1C9500822AD9 /* XHLaunchAd.m in Sources */,
 				6767AED11E2E1C9500822AD9 /* XHLaunchAdDownload.m in Sources */,
 				671BFB681E234ECC0030DAC9 /* SQLoginViewController.m in Sources */,

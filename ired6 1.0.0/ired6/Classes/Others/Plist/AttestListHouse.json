@@ -1,0 +1,11 @@
+{
+    "success": "1",
+    "data":
+    [
+     {"isAttested":"1","titleStr":"华澳中心3号楼26E","detailStr":"北京市海淀区紫竹院路31号","additionalStr":"房屋面积:108.55m²","attestedNum":"5"
+     },
+     {"isAttested":"0","titleStr":"美林家园3012室","detailStr":"北京市海淀区紫竹院路31号","additionalStr":"房屋面积:105m²","attestedNum":"5"
+     }
+     ];
+
+}

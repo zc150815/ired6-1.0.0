@@ -10,13 +10,14 @@
 #import "SQHouseCertificationCell.h"
 #import "SQHousingMemberController.h"
 #import "SQLocationViewController.h"
-#import "SQAttestListModel.h"
+//#import "SQAttestListModel.h"
 #import "SQCertificationModel.h"
+#import "SQHouseCertificationModel.h"
 
 @interface SQHousingCertificationController ()<UITableViewDelegate,UITableViewDataSource,SQLocationViewControllerDelegate>
 
 @property (nonatomic, strong) UITableView *mainTableView;
-@property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 
@@ -28,25 +29,21 @@
     [self loadData];
     [self setupUI];
 }
+-(NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray new];
+    }
+    return _dataArray;
+}
+
 -(void)loadData{
     
-    NSArray *array = @[
-                       @[
-                           @{@"itemStr":@"所在小区",@"detailStr":@"华澳中心"},
-                           @{@"itemStr":@"所在楼栋",@"detailStr":@"10号楼"},
-                           @{@"itemStr":@"所在单元",@"detailStr":@"3单元"},
-                           @{@"itemStr":@"所在楼层",@"detailStr":@"26楼"},
-                           @{@"itemStr":@"所在房间",@"detailStr":@"26E"},
-                           @{@"itemStr":@"我的身份",@"detailStr":@"房主"},
-                           @{@"itemStr":@"其他信息",@"detailStr":@"面积:100m² 物业费:2.5元m²"}],
-                       @[
-                           @{@"itemStr":@"家有老人",@"detailStr":@"1"},
-                           @{@"itemStr":@"家有小孩",@"detailStr":@"2"},
-                           @{@"itemStr":@"残障人士",@"detailStr":@"3"},
-                           @{@"itemStr":@"家有宠物",@"detailStr":@"4"}]
-                       ];
-    
-    self.dataArray = [SQCertificationModel mj_objectArrayWithKeyValuesArray:array];
+    [[SQNetworkingTools sharedNetWorkingTools]getHousingCertificationDataWithCallBack:^(NSDictionary *response, NSError *error) {
+        
+        [self.dataArray addObject:[SQCertificationModel mj_objectArrayWithKeyValuesArray:response[@"required"]]];
+        [self.dataArray addObject:[SQHouseCertificationModel mj_objectArrayWithKeyValuesArray:response[@"optional"]]];
+        [self.mainTableView reloadData];
+    }];
 }
 -(void)setupUI{
     
@@ -103,20 +100,33 @@
     
     SQHouseCertificationCell *cell = [[SQHouseCertificationCell alloc]init];
     
-    SQCertificationModel *model = self.dataArray[indexPath.section][indexPath.row];
-    
-    if (self.canEdit) {
-        model.canPush = YES;
-        model.canSelected = indexPath.section;
-        model.show = NO;
+    if (indexPath.section == 0) {
+        SQCertificationModel *infoModel = self.dataArray[indexPath.section][indexPath.row];
+        if (self.canEdit) {
+            infoModel.canPush = YES;
+            infoModel.canSelected = YES;
+            infoModel.show = NO;
+            
+        }else{
+            infoModel.canPush = NO;
+            infoModel.canSelected = NO;
+            infoModel.show = YES;
+        }
+        cell.infoModel = infoModel;
     }else{
-        model.canPush = indexPath.section;
-        model.canSelected = NO;
-        model.show = YES;
+        SQHouseCertificationModel *memberModel = self.dataArray[indexPath.section][indexPath.row];
+        if (self.canEdit) {
+            memberModel.canSelected = YES;
+            memberModel.show = NO;
+            
+        }else{
+            memberModel.canSelected = NO;
+            memberModel.show = YES;
+        }
+        cell.memberModel = memberModel;
     }
-    cell.tag = [NSString stringWithFormat:@"10%zd%zd",indexPath.section,indexPath.row].integerValue;
-    cell.model = model;
     
+    cell.tag = [NSString stringWithFormat:@"10%zd%zd",indexPath.section,indexPath.row].integerValue;
     return cell;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -149,15 +159,18 @@
             locationVC.delegate = self;
             [self.navigationController pushViewController:locationVC animated:YES];
         }else{
-            
             [[SQPublicTools sharedPublicTools]showMessage:[NSString stringWithFormat:@"%zd组%zd行",indexPath.section,indexPath.row] duration:3];
-
         }
     }
     if (indexPath.section == 1) {
         SQHousingMemberController *memberVC = [[SQHousingMemberController alloc]initWithStyle:UITableViewStyleGrouped];
         
-        memberVC.model = self.dataArray[indexPath.section][indexPath.row];
+        SQHouseCertificationModel *model = self.dataArray[indexPath.section][indexPath.row];
+        if (!self.canEdit) {
+            memberVC.model = model;
+        }else{
+            memberVC.title = model.item;
+        }
         [self.navigationController pushViewController:memberVC animated:YES];
     }
 }

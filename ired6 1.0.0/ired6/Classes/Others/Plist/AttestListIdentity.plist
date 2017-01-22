@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>data</key>
+	<array>
+		<dict>
+			<key>isAttested</key>
+			<string>1</string>
+			<key>titleStr</key>
+			<string>实名认证</string>
+			<key>additionalStr</key>
+			<string>姓名:张洋</string>
+		</dict>
+		<dict>
+			<key>isAttested</key>
+			<string>0</string>
+			<key>titleStr</key>
+			<string>社区管理</string>
+			<key>additionalStr</key>
+			<string>负责区域:华澳中心小区</string>
+		</dict>
+	</array>
+</dict>
+</plist>

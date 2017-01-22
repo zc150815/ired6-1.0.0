@@ -13,7 +13,7 @@
 
 @property (nonatomic,assign) BOOL canEdit;
 
-@property (nonatomic, strong) SQAttestListModel *model;
+//@property (nonatomic, strong) SQAttestListModel *model;
 
 
 @end

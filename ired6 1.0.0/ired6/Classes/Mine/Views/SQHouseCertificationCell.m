@@ -8,6 +8,7 @@
 
 #import "SQHouseCertificationCell.h"
 #import "SQCertificationModel.h"
+#import "SQHouseCertificationModel.h"
 
 @interface SQHouseCertificationCell ()
 
@@ -57,23 +58,34 @@
     SQ_NSLog(@"selected = %zd",sender.selected);
 }
 
--(void)setModel:(SQCertificationModel *)model{
-    _model = model;
-    
-    if (model.canSelected) {
-        [_titleBtn setImage:[UIImage imageNamed:@"remember-nomal"] forState:UIControlStateNormal];
-        [_titleBtn setImage:[UIImage imageNamed:@"remember-selected"] forState:UIControlStateSelected];
+-(void)setInfoModel:(SQCertificationModel *)infoModel{
+    _infoModel = infoModel;
+    [_titleBtn setTitle:infoModel.item forState:UIControlStateNormal];
+    if (infoModel.show) {
+        _detailLab.text = infoModel.detail;
     }
-    [_titleBtn setTitle:model.itemStr forState:UIControlStateNormal];
-    if (model.show) {
-        _detailLab.text = model.detailStr;
-    }
-    if (!model.show && self.tag == 1000) {
+    if (!infoModel.show && self.tag == 1000) {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         _detailLab.text = [defaults objectForKey:CommunityName];
     }
-    self.accessoryType = model.canPush?UITableViewCellAccessoryDisclosureIndicator:UITableViewCellAccessoryNone;
-    self.userInteractionEnabled = model.canPush;
+    self.accessoryType = infoModel.canPush?UITableViewCellAccessoryDisclosureIndicator:UITableViewCellAccessoryNone;
+    self.userInteractionEnabled = infoModel.canPush;
 
 }
+-(void)setMemberModel:(SQHouseCertificationModel *)memberModel{
+    _memberModel = memberModel;
+    
+    if (memberModel.canSelected) {
+        [_titleBtn setImage:[UIImage imageNamed:@"remember-nomal"] forState:UIControlStateNormal];
+        [_titleBtn setImage:[UIImage imageNamed:@"remember-selected"] forState:UIControlStateSelected];
+    }
+    [_titleBtn setTitle:memberModel.item forState:UIControlStateNormal];
+    if (memberModel.show) {
+        _detailLab.text = [NSString stringWithFormat:@"%zd",memberModel.detailArr.count];
+    }
+    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    self.userInteractionEnabled = YES;
+
+}
+
 @end

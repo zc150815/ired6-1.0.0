@@ -77,18 +77,8 @@ static id _instanceType;
         }];
     }
 }
-
-
-/**登录**/
--(void)requestLoginWithPhoneNum:(NSString*)phoneNum withPassword:(NSString *)password callBack:(callBack)callBack{
-    
-    NSString *url = @"http://shequ365test.4pole.cn:6180/login.json";
-    NSDictionary *params = @{@"phone":phoneNum,@"password":password};
-    
-    [self requestWithRequestType:POST url:url params:params callBack:callBack];
-}
-
-//加载启动页广告数据
+#pragma mark
+#pragma 加载启动页广告数据
 -(void)getLaunchAdvertisementImageDataWithCallBack:(callBack)callBack{
     
 //    NSString*url = @"";
@@ -109,5 +99,44 @@ static id _instanceType;
     NSDictionary *params = @{};
     [self requestWithRequestType:GET url:url params:params callBack:callBack];
 }
+#pragma mark
+#pragma mark 网络数据获取
+//认证管理页房屋认证数据列表
+-(void)getAttestListHouseDataWithCallBack:(callBack)callBack{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"AttestListHouse" ofType:@"plist"];
+        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+        callBack(dic,nil);
+    });
+}
+//认证管理页身份认证数据列表
+-(void)getAttestListIdentityDataWithCallBack:(callBack)callBack{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"AttestListIdentity" ofType:@"plist"];
+        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+        callBack(dic,nil);
+    });
 
+}
+//房屋认证数据详情
+-(void)getHousingCertificationDataWithCallBack:(callBack)callBack{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"HousingCertification" ofType:@"plist"];
+        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+        callBack(dic,nil);
+    });
+}
+//身份认证数据详情
+-(void)getIdentityCertificationDataWithCallBack:(callBack)callBack{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"IdentityCertification" ofType:@"plist"];
+        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+        callBack(dic,nil);
+    });
+}
 @end

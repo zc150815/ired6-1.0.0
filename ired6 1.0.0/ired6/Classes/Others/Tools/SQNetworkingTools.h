@@ -21,15 +21,24 @@ typedef void (^callBack)(NSDictionary* response,NSError* error);
 
 @interface SQNetworkingTools : AFHTTPSessionManager
 
+//网路状态判断
 + (void)checkReachabilityStatus;
 
 +(instancetype)sharedNetWorkingTools;
 
-
-/**登录**/
--(void)requestLoginWithPhoneNum:(NSString*)phoneNum withPassword:(NSString *)password callBack:(callBack)callBack;
-
-//加载启动页广告数据
+#pragma mark
+#pragma mark 加载启动页广告数据
 -(void)getLaunchAdvertisementImageDataWithCallBack:(callBack)callBack;
 -(void)getLaunchAdvertisementIVideoDataWithCallBack:(callBack)callBack;
+
+#pragma mark
+#pragma mark 网络数据获取
+//认证管理页房屋认证数据列表
+-(void)getAttestListHouseDataWithCallBack:(callBack)callBack;
+//认证管理页身份认证数据列表
+-(void)getAttestListIdentityDataWithCallBack:(callBack)callBack;
+//房屋认证数据详情
+-(void)getHousingCertificationDataWithCallBack:(callBack)callBack;
+//身份认证数据详情
+-(void)getIdentityCertificationDataWithCallBack:(callBack)callBack;
 @end

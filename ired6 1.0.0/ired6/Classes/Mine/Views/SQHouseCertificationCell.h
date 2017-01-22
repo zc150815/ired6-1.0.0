@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class SQCertificationModel;
+@class SQCertificationModel,SQHouseCertificationModel;
 @interface SQHouseCertificationCell : UITableViewCell
 
-@property (nonatomic, strong) SQCertificationModel *model;
-
+@property (nonatomic, strong) SQCertificationModel *infoModel;
+@property (nonatomic, strong) SQHouseCertificationModel *memberModel;
 @end

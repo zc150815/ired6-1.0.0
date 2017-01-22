@@ -8,6 +8,7 @@
 
 #import "SQHousingMemberController.h"
 #import "SQCertificationModel.h"
+#import "SQHouseCertificationModel.h"
 #import "SQHousingMemberCell.h"
 
 @interface SQHousingMemberController ()
@@ -27,7 +28,7 @@
 #pragma mark - Tableview代理方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
-    return self.model.detailStr.integerValue;
+    return self.model.detailArr.count;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
@@ -39,10 +40,12 @@
     return cell;
 }
 
--(void)setModel:(SQCertificationModel *)model{
+-(void)setModel:(SQHouseCertificationModel *)model{
     _model = model;
+    self.title = model.item;
     
-    self.title = model.itemStr;
+    SQ_NSLog(@"%zd",model.detailArr.count);
+
     [self.tableView reloadData];
 }
 

@@ -55,8 +55,8 @@
 -(void)setModel:(SQCertificationModel *)model{
     _model = model;
     
-    _iconView.image = [UIImage imageNamed:model.state.integerValue?[NSString stringWithFormat:@"%@Selected",model.itemImage]:[NSString stringWithFormat:@"%@Nomal",model.itemImage]];
-    _detailLab.text = model.itemStr;
+    _iconView.image = [UIImage imageNamed:model.state.integerValue?[NSString stringWithFormat:@"%@Selected",model.image]:[NSString stringWithFormat:@"%@Nomal",model.image]];
+    _detailLab.text = model.item;
     [_detailLab sizeToFit];
     _detailLab.textColor = model.state.integerValue?[UIColor getColor:@"343434"]:[UIColor getColor:@"888888"];
 
