@@ -10,7 +10,6 @@
 #import "SQHouseCertificationCell.h"
 #import "SQHousingMemberController.h"
 #import "SQLocationViewController.h"
-//#import "SQAttestListModel.h"
 #import "SQCertificationModel.h"
 #import "SQHouseCertificationModel.h"
 

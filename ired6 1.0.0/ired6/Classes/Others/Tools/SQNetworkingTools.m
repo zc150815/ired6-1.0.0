@@ -123,20 +123,17 @@ static id _instanceType;
 }
 //房屋认证数据详情
 -(void)getHousingCertificationDataWithCallBack:(callBack)callBack{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"HousingCertification" ofType:@"plist"];
-        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
-        callBack(dic,nil);
-    });
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"HousingCertification" ofType:@"plist"];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    callBack(dic,nil);
+
 }
 //身份认证数据详情
 -(void)getIdentityCertificationDataWithCallBack:(callBack)callBack{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"IdentityCertification" ofType:@"plist"];
-        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
-        callBack(dic,nil);
-    });
+
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"IdentityCertification" ofType:@"plist"];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    callBack(dic,nil);
 }
 @end
