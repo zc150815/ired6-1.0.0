@@ -8,6 +8,7 @@
 
 #import "SQAttestViewController.h"
 #import "SQHousingCertificationController.h"
+#import "SQIdentityCertificationController.h"
 #import "SQAttestCell.h"
 #import "SQAttestListModel.h"
 
@@ -18,7 +19,8 @@
 @property (nonatomic, strong) UIButton *addNewAttest;//新增认证按钮
 @property (nonatomic, strong) UIImageView *triangleView;//当前页面标记
 
-@property (nonatomic, strong) NSArray *dataArr;//数据源
+@property (nonatomic, strong) NSArray *dataArr1;//数据源1
+@property (nonatomic, strong) NSArray *dataArr2;//数据源2
 
 
 
@@ -38,11 +40,16 @@
 -(void)loadData{
     
     NSArray *array1 = @[
-                        @{@"isAttested":@"1",@"address":@"华澳中心3号楼26E",@"detailAddress":@"北京市海淀区紫竹院路31号",@"detailStr":@"房屋面积:108.55m²",@"attestedNum":@"5",},
-                        @{@"isAttested":@"0",@"address":@"美林家园3012室",@"detailAddress":@"北京市海淀区紫竹院路31号",@"detailStr":@"房屋面积:105m²",@"attestedNum":@"5",}
+                        @{@"isAttested":@"1",@"titleStr":@"华澳中心3号楼26E",@"detailStr":@"北京市海淀区紫竹院路31号",@"additionalStr":@"房屋面积:108.55m²",@"attestedNum":@"5",},
+                        @{@"isAttested":@"0",@"titleStr":@"美林家园3012室",@"detailStr":@"北京市海淀区紫竹院路31号",@"additionalStr":@"房屋面积:105m²",@"attestedNum":@"5",}
                         ];
-    self.dataArr = [SQAttestListModel mj_objectArrayWithKeyValuesArray:array1];
+    NSArray *array2 = @[
+                        @{@"isAttested":@"1",@"titleStr":@"实名认证",@"additionalStr":@"姓名:张洋"},
+                        @{@"isAttested":@"0",@"titleStr":@"社区管理",@"additionalStr":@"负责区域:华澳中心小区"}
+                        ];
     
+    self.dataArr1 = [SQAttestListModel mj_objectArrayWithKeyValuesArray:array1];
+    self.dataArr2 = [SQAttestListModel mj_objectArrayWithKeyValuesArray:array2];
     
 }
 -(void)setupUI{
@@ -102,17 +109,17 @@
 #pragma mark TableviewDelegate代理方法
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return self.triangleView.centerX<(SQ_ScreenWidth/2)?self.dataArr.count:self.dataArr.count;
+    return self.triangleView.centerX<(SQ_ScreenWidth/2)?self.dataArr1.count:self.dataArr2.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     SQAttestCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AttestListTableViewCellID" forIndexPath:indexPath];
-    cell.model = self.dataArr[indexPath.row];
+    cell.model = self.triangleView.centerX<(SQ_ScreenWidth/2)?self.dataArr1[indexPath.row]:self.dataArr2[indexPath.row];
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return self.triangleView.centerX<(SQ_ScreenWidth/2)?SQ_Fit(110):SQ_Fit(120);
+    return self.triangleView.centerX<(SQ_ScreenWidth/2)?SQ_Fit(110):SQ_Fit(80);
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -120,10 +127,14 @@
         SQHousingCertificationController *houseVC = [[SQHousingCertificationController alloc]init];
         houseVC.canEdit = NO;
         houseVC.title = @"房屋认证";
-        houseVC.model = self.dataArr[indexPath.row];
+        houseVC.model = self.dataArr1[indexPath.row];
         [self.navigationController pushViewController:houseVC animated:YES];
     }else{
-        [[SQPublicTools sharedPublicTools]showMessage:@"身份认证建设中" duration:3];
+//        SQIdentityCertificationController *identityVC = [[SQIdentityCertificationController alloc]init];
+//        identityVC.canEdit = NO;
+//        identityVC.title = @"身份认证";
+//        identityVC.model = self.dataArr2[indexPath.row];
+//        [self.navigationController pushViewController:identityVC animated:YES];
     }
 }
 
@@ -132,14 +143,15 @@
 //新增认证按钮点击事件
 -(void)newAttestButtonClick:(UIButton*)sender{
     
-    if (self.triangleView.centerX<(SQ_ScreenWidth/2)){
+    if (self.triangleView.centerX<(SQ_ScreenWidth/2)) {
         SQHousingCertificationController *houseVC = [[SQHousingCertificationController alloc]init];
         houseVC.canEdit = YES;
         houseVC.title = @"新增房屋认证";
         [self.navigationController pushViewController:houseVC animated:YES];
-        
     }else{
-        [[SQPublicTools sharedPublicTools]showMessage:@"新增身份认证建设中" duration:3];
+        SQIdentityCertificationController *identityVC = [[SQIdentityCertificationController alloc]init];
+        identityVC.title = @"新增身份认证";
+        [self.navigationController pushViewController:identityVC animated:YES];
     }
 }
 //认证列表切换按钮点击事件

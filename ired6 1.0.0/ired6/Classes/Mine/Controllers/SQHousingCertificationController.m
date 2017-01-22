@@ -7,7 +7,8 @@
 //
 
 #import "SQHousingCertificationController.h"
-#import "SQCertificationCell.h"
+#import "SQHouseCertificationCell.h"
+#import "SQHousingMemberController.h"
 #import "SQLocationViewController.h"
 #import "SQAttestListModel.h"
 #import "SQCertificationModel.h"
@@ -100,7 +101,7 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    SQCertificationCell *cell = [[SQCertificationCell alloc]init];
+    SQHouseCertificationCell *cell = [[SQHouseCertificationCell alloc]init];
     
     SQCertificationModel *model = self.dataArray[indexPath.section][indexPath.row];
     
@@ -142,10 +143,22 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.section == 0 && indexPath.row == 0) {
-        SQLocationViewController *locationVC = [[SQLocationViewController alloc]init];
-        locationVC.delegate = self;
-        [self.navigationController pushViewController:locationVC animated:YES];
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            SQLocationViewController *locationVC = [[SQLocationViewController alloc]init];
+            locationVC.delegate = self;
+            [self.navigationController pushViewController:locationVC animated:YES];
+        }else{
+            
+            [[SQPublicTools sharedPublicTools]showMessage:[NSString stringWithFormat:@"%zd组%zd行",indexPath.section,indexPath.row] duration:3];
+
+        }
+    }
+    if (indexPath.section == 1) {
+        SQHousingMemberController *memberVC = [[SQHousingMemberController alloc]initWithStyle:UITableViewStyleGrouped];
+        
+        memberVC.model = self.dataArray[indexPath.section][indexPath.row];
+        [self.navigationController pushViewController:memberVC animated:YES];
     }
 }
 #pragma mark 分割线对齐方法
@@ -175,7 +188,7 @@
 -(void)locationView:(SQLocationViewController *)locationView withLocationStr:(NSString *)locationStr{
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    SQCertificationCell *cell = [_mainTableView cellForRowAtIndexPath:indexPath];
+    SQHouseCertificationCell *cell = [_mainTableView cellForRowAtIndexPath:indexPath];
     for (UIView*view in cell.subviews) {
         if ([view isKindOfClass:[UILabel class]]) {
             UILabel *detailLab = (UILabel*)view;

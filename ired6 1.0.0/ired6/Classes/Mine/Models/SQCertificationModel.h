@@ -10,8 +10,13 @@
 
 @interface SQCertificationModel : NSObject
 
+@property (nonatomic,copy) NSString *state;//状态
+
+@property (nonatomic,copy) NSString *itemImage;//leg:"identity.png"
 @property (nonatomic,copy) NSString *itemStr;//leg:所在小区
 @property (nonatomic,copy) NSString *detailStr;//leg:华澳中心
+
+
 
 @property (nonatomic,assign) BOOL canPush;
 @property (nonatomic,assign) BOOL canSelected;

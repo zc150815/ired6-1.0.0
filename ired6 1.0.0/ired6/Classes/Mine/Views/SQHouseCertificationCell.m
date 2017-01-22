@@ -6,17 +6,17 @@
 //  Copyright © 2017年 ired6. All rights reserved.
 //
 
-#import "SQCertificationCell.h"
+#import "SQHouseCertificationCell.h"
 #import "SQCertificationModel.h"
 
-@interface SQCertificationCell ()
+@interface SQHouseCertificationCell ()
 
 @property (nonatomic, strong) UIButton *titleBtn;
 @property (nonatomic, strong) UILabel *detailLab;
 
 
 @end
-@implementation SQCertificationCell
+@implementation SQHouseCertificationCell
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {

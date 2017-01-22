@@ -10,11 +10,20 @@
 
 @interface SQAttestListModel : NSObject
 
-@property (nonatomic,copy) NSString *isAttested;
-@property (nonatomic,copy) NSString *address;
-@property (nonatomic,copy) NSString *detailAddress;
-@property (nonatomic,copy) NSString *detailStr;
-@property (nonatomic,copy) NSString *attestedNum;
+//认证管理首页内容model
+@property (nonatomic,copy) NSString *isAttested;    //认证状态
+@property (nonatomic,copy) NSString *titleStr;      //首要内容
+@property (nonatomic,copy) NSString *detailStr;     //次要内容
+@property (nonatomic,copy) NSString *additionalStr; //补充内容
+@property (nonatomic,copy) NSString *attestedNum;   //认证数量
+
+//房屋认证内容model
+
+
+
+//身份认证内容model
+
+
 
 
 

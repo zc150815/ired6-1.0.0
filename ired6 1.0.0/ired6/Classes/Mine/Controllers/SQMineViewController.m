@@ -8,7 +8,7 @@
 
 #import "SQMineViewController.h"
 #import "SQAttestViewController.h"
-#import "SQMyPointViewController.h"
+
 
 @interface SQMineViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -71,9 +71,9 @@
     
     //积分管理
     if (indexPath.row == 2) {
-        SQMyPointViewController *myPointVC = [[SQMyPointViewController alloc]init];
-        [self.navigationController pushViewController:myPointVC animated:YES];
-        return;
+//        SQMyPointViewController *myPointVC = [[SQMyPointViewController alloc]init];
+//        [self.navigationController pushViewController:myPointVC animated:YES];
+//        return;
     }
 }
 
