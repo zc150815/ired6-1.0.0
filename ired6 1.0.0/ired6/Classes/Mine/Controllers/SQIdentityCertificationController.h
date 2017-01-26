@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class SQAttestListModel;
-@interface SQIdentityCertificationController : UITableViewController
 
-@property (nonatomic,assign) BOOL canEdit;
-@property (nonatomic, strong) SQAttestListModel *model;
+@interface SQIdentityCertificationController : UITableViewController
 
 @end

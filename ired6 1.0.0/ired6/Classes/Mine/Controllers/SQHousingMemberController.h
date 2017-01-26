@@ -12,5 +12,6 @@
 @interface SQHousingMemberController : UITableViewController
 
 @property (nonatomic, strong) SQHouseCertificationModel *model;
+@property (nonatomic,assign) BOOL canEdit;
 
 @end

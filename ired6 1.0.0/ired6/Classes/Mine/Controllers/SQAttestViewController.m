@@ -9,6 +9,7 @@
 #import "SQAttestViewController.h"
 #import "SQHousingCertificationController.h"
 #import "SQIdentityCertificationController.h"
+#import "SQIdentityMemberController.h"
 #import "SQAttestCell.h"
 #import "SQAttestListModel.h"
 
@@ -19,8 +20,8 @@
 @property (nonatomic, strong) UIButton *addNewAttest;//新增认证按钮
 @property (nonatomic, strong) UIImageView *triangleView;//当前页面标记
 
-@property (nonatomic, strong) NSArray *houseList;//数据源1
-@property (nonatomic, strong) NSArray *identityList;//数据源2
+@property (nonatomic, strong) NSArray *houseList;//数据源1 :房屋认证
+@property (nonatomic, strong) NSArray *identityList;//数据源2:身份认证
 
 
 
@@ -39,21 +40,29 @@
 //加载网络数据
 -(void)loadData{
     
-    [[SQNetworkingTools sharedNetWorkingTools]getAttestListHouseDataWithCallBack:^(NSDictionary *response, NSError *error) {
+    [[SQNetworkingTools sharedNetWorkingTools]getAttestListHouseDataWithCallBack:^(id response, NSError *error) {
         
         if (error) {
             [[SQPublicTools sharedPublicTools]showMessage:@"数据获取错误" duration:3];
-            return ;
+            return;
         }
-        self.houseList = [SQAttestListModel mj_objectArrayWithKeyValuesArray:response[@"data"]];
-        [self.attestListView reloadData];
-        
+        if ([response isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *dic = (NSDictionary*)response;
+            self.houseList = [SQAttestListModel mj_objectArrayWithKeyValuesArray:dic[@"data"]];
+            [self.attestListView reloadData];
+        }
     }];
-    [[SQNetworkingTools sharedNetWorkingTools]getAttestListIdentityDataWithCallBack:^(NSDictionary *response, NSError *error) {
+    [[SQNetworkingTools sharedNetWorkingTools]getAttestListIdentityDataWithCallBack:^(id response, NSError *error) {
         
-        self.identityList = [SQAttestListModel mj_objectArrayWithKeyValuesArray:response[@"data"]];
-        [self.attestListView reloadData];
-
+        if (error) {
+            [[SQPublicTools sharedPublicTools]showMessage:@"数据获取错误" duration:3];
+            return;
+        }
+        if ([response isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *dic = (NSDictionary*)response;
+            self.identityList = [SQAttestListModel mj_objectArrayWithKeyValuesArray:dic[@"data"]];
+            [self.attestListView reloadData];
+        }
     }];
     
 }
@@ -88,10 +97,13 @@
     
     
     _addNewAttest = [UIButton buttonWithType:UIButtonTypeCustom];
-    _addNewAttest.frame = CGRectMake(0, SQ_ScreenHeight-64-SQ_Fit(48), SQ_ScreenWidth, SQ_Fit(48));
+    _addNewAttest.frame = CGRectMake(0, SQ_ScreenHeight-64-48, SQ_ScreenWidth, 48);
     [_addNewAttest setBackgroundColor:[UIColor getColor:@"fb4142"]];
     [_addNewAttest setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    _addNewAttest.titleLabel.font = SQ_Font(SQ_Fit(16));
+    [_addNewAttest setImage:[UIImage imageNamed:@"addItemWhite"] forState:UIControlStateNormal];
+    _addNewAttest.imageEdgeInsets = UIEdgeInsetsMake(0, -12, 0, 12);
+    _addNewAttest.titleLabel.font = SQ_Font(16);
+    _addNewAttest.adjustsImageWhenHighlighted = NO;
     [self.view addSubview:_addNewAttest];
     [_addNewAttest addTarget:self action:@selector(newAttestButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -104,7 +116,7 @@
     _attestListView.estimatedRowHeight = 50;
     _attestListView.backgroundColor = [UIColor clearColor];
     _attestListView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [_attestListView registerClass:[SQAttestCell class] forCellReuseIdentifier:@"AttestListTableViewCellID"];
+    //[_attestListView registerClass:[SQAttestCell class] forCellReuseIdentifier:@"AttestListTableViewCellID"];
     [self.view addSubview:_attestListView];
 
 }
@@ -118,7 +130,7 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    SQAttestCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AttestListTableViewCellID" forIndexPath:indexPath];
+    SQAttestCell *cell = [[SQAttestCell alloc]init];
     cell.model = self.triangleView.centerX<(SQ_ScreenWidth/2)?self.houseList[indexPath.row]:self.identityList[indexPath.row];
     return cell;
 }
@@ -132,11 +144,16 @@
         SQHousingCertificationController *houseVC = [[SQHousingCertificationController alloc]init];
         houseVC.canEdit = NO;
         houseVC.title = @"房屋认证";
-//        houseVC.model = self.houseList[indexPath.row];
+        houseVC.model = self.houseList[indexPath.row];
         [self.navigationController pushViewController:houseVC animated:YES];
     }else{
-
         
+        SQIdentityMemberController *memberVC = [[SQIdentityMemberController alloc]init];
+        SQAttestListModel *model = self.identityList[indexPath.row];
+        memberVC.canEdit = NO;
+        memberVC.title = model.titleStr;
+        memberVC.model = model;
+        [self.navigationController pushViewController:memberVC animated:YES];
     }
 }
 
@@ -149,10 +166,12 @@
         SQHousingCertificationController *houseVC = [[SQHousingCertificationController alloc]init];
         houseVC.canEdit = YES;
         houseVC.title = @"新增房屋认证";
+        houseVC.model = self.houseList.firstObject;
         [self.navigationController pushViewController:houseVC animated:YES];
     }else{
         SQIdentityCertificationController *identityVC = [[SQIdentityCertificationController alloc]init];
         identityVC.title = @"新增身份认证";
+        
         [self.navigationController pushViewController:identityVC animated:YES];
     }
 }

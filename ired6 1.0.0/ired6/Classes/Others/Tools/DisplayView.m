@@ -27,8 +27,6 @@
     if (self = [super initWithFrame:frame]) {
         _imageArray = [@[@"闪屏1.png",@"闪屏2.png", @"闪屏3.png",@"闪屏4.png"]mutableCopy];
         
-//        _imageArray = [NSMutableArray arrayWithObjects:@"闪屏1.png",@"闪屏2.png", @"闪屏3.png",@"闪屏4.png", nil];
-        
         UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, MainScreen_width, MainScreen_height)];
         
         scrollView.contentSize = CGSizeMake((_imageArray.count + 1)*MainScreen_width, MainScreen_height);
@@ -72,7 +70,6 @@
     if (_pageControl.currentPage == 3) {
         
         self.hidden = YES;
-        
     }
 }
 
@@ -84,13 +81,11 @@
         
         _pageControl.currentPage = offSet.x/(self.bounds.size.width);//计算当前的页码
         [scrollView setContentOffset:CGPointMake(self.bounds.size.width * (_pageControl.currentPage), scrollView.contentOffset.y) animated:YES];
-        
     }
     
     if (scrollView.contentOffset.x == (_imageArray.count) *MainScreen_width) {
         
         [self removeFromSuperview];
-        
     }
     
 }

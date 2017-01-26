@@ -10,13 +10,15 @@
 #import "SQHouseCertificationCell.h"
 #import "SQHousingMemberController.h"
 #import "SQLocationViewController.h"
+
+#import "SQAttestListModel.h"
 #import "SQCertificationModel.h"
 #import "SQHouseCertificationModel.h"
 
 @interface SQHousingCertificationController ()<UITableViewDelegate,UITableViewDataSource,SQLocationViewControllerDelegate>
 
 @property (nonatomic, strong) UITableView *mainTableView;
-@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *dataArr;
 
 @end
 
@@ -25,28 +27,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self loadData];
     [self setupUI];
 }
--(NSMutableArray *)dataArray{
-    if (!_dataArray) {
-        _dataArray = [NSMutableArray new];
+-(NSMutableArray *)dataArr{
+    if (!_dataArr) {
+        _dataArr = [NSMutableArray new];
     }
-    return _dataArray;
+    return _dataArr;
+}
+-(void)setModel:(SQAttestListModel *)model{
+    _model = model;
+    
+    NSArray *requiredArr = (NSArray*)model.required;
+    NSArray *optionalArr = (NSArray*)model.optional;
+    [self.dataArr addObject:[SQCertificationModel mj_objectArrayWithKeyValuesArray:requiredArr]];
+    [self.dataArr addObject:[SQHouseCertificationModel mj_objectArrayWithKeyValuesArray:optionalArr]];
+    
+    [self.mainTableView reloadData];
 }
 
--(void)loadData{
-    
-    [[SQNetworkingTools sharedNetWorkingTools]getHousingCertificationDataWithCallBack:^(NSDictionary *response, NSError *error) {
-        
-        [self.dataArray addObject:[SQCertificationModel mj_objectArrayWithKeyValuesArray:response[@"required"]]];
-        [self.dataArray addObject:[SQHouseCertificationModel mj_objectArrayWithKeyValuesArray:response[@"optional"]]];
-        [self.mainTableView reloadData];
-    }];
-}
 -(void)setupUI{
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor getColor:@"f2f2f2"];
     self.mainTableView.frame = CGRectMake(0, 0, SQ_ScreenWidth, SQ_ScreenHeight-64);
     [self.view addSubview:_mainTableView];
     
@@ -78,6 +80,7 @@
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
         _mainTableView.bounces = NO;
+        _mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _mainTableView;
 }
@@ -85,14 +88,14 @@
 #pragma mark
 #pragma mark UITableView代理方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return self.dataArray.count;
+    return self.dataArr.count;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
   
-    if (section) {
-        return self.canEdit?[self.dataArray[section] count]:[self.dataArray[section] count];
+    if (section == 1) {
+        return [self.dataArr[section] count];
     }
-    return self.canEdit?[self.dataArray[section] count]-1:[self.dataArray[section] count];
+    return self.canEdit?[self.dataArr[section] count]-1:[self.dataArr[section] count];
 
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -100,7 +103,7 @@
     SQHouseCertificationCell *cell = [[SQHouseCertificationCell alloc]init];
     
     if (indexPath.section == 0) {
-        SQCertificationModel *infoModel = self.dataArray[indexPath.section][indexPath.row];
+        SQCertificationModel *infoModel = self.dataArr[indexPath.section][indexPath.row];
         if (self.canEdit) {
             infoModel.canPush = YES;
             infoModel.canSelected = YES;
@@ -113,7 +116,7 @@
         }
         cell.infoModel = infoModel;
     }else{
-        SQHouseCertificationModel *memberModel = self.dataArray[indexPath.section][indexPath.row];
+        SQHouseCertificationModel *memberModel = self.dataArr[indexPath.section][indexPath.row];
         if (self.canEdit) {
             memberModel.canSelected = YES;
             memberModel.show = NO;
@@ -161,37 +164,18 @@
             [[SQPublicTools sharedPublicTools]showMessage:[NSString stringWithFormat:@"%zd组%zd行",indexPath.section,indexPath.row] duration:3];
         }
     }
+    //进入居委会关照项(选填)
     if (indexPath.section == 1) {
         SQHousingMemberController *memberVC = [[SQHousingMemberController alloc]initWithStyle:UITableViewStyleGrouped];
-        
-        SQHouseCertificationModel *model = self.dataArray[indexPath.section][indexPath.row];
+        memberVC.canEdit = self.canEdit;
+        SQHouseCertificationModel *model = self.dataArr[indexPath.section][indexPath.row];
         if (!self.canEdit) {
+            //
             memberVC.model = model;
         }else{
             memberVC.title = model.item;
         }
         [self.navigationController pushViewController:memberVC animated:YES];
-    }
-}
-#pragma mark 分割线对齐方法
--(void)viewDidLayoutSubviews{
-    
-    if ([_mainTableView respondsToSelector:@selector(setSeparatorInset:)]) {
-        [_mainTableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];
-    }
-    
-    if ([_mainTableView respondsToSelector:@selector(setLayoutMargins:)]) {
-        [_mainTableView setLayoutMargins:UIEdgeInsetsMake(0,0,0,0)];
-    }
-}
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsZero];
-    }
-    
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
     }
 }
 

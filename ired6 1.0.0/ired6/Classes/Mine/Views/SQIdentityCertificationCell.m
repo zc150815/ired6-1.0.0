@@ -7,7 +7,7 @@
 //
 
 #import "SQIdentityCertificationCell.h"
-#import "SQCertificationModel.h"
+#import "SQAttestListModel.h"
 
 
 @interface SQIdentityCertificationCell ()
@@ -35,14 +35,14 @@
     
     UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SQ_ScreenWidth, 1)];
     line.backgroundColor = [UIColor getColor:@"f2f2f2"];
-    [self.contentView addSubview:line];
+    [self addSubview:line];
     
     _iconView = [[UIImageView alloc]initWithFrame:CGRectMake(SQ_Fit(15), SQ_Fit(12), SQ_Fit(24), SQ_Fit(24))];
-    [self.contentView addSubview:_iconView];
+    [self addSubview:_iconView];
     
     _detailLab = [[UILabel alloc]init];
     _detailLab.font = SQ_Font(SQ_Fit(15));
-    [self.contentView addSubview:_detailLab];
+    [self addSubview:_detailLab];
     
 }
 
@@ -52,13 +52,13 @@
     _detailLab.x = CGRectGetMaxX(_iconView.frame)+SQ_Fit(12);
     _detailLab.centerY = _iconView.centerY;
 }
--(void)setModel:(SQCertificationModel *)model{
+-(void)setModel:(SQAttestListModel *)model{
     _model = model;
     
-    _iconView.image = [UIImage imageNamed:model.state.integerValue?[NSString stringWithFormat:@"%@Selected",model.image]:[NSString stringWithFormat:@"%@Nomal",model.image]];
-    _detailLab.text = model.item;
+    _iconView.image = [UIImage imageNamed:model.isAttested.integerValue?[NSString stringWithFormat:@"%@Selected",model.titleImage]:[NSString stringWithFormat:@"%@Nomal",model.titleImage]];
+    _detailLab.text = model.titleStr;
     [_detailLab sizeToFit];
-    _detailLab.textColor = model.state.integerValue?[UIColor getColor:@"343434"]:[UIColor getColor:@"888888"];
+    _detailLab.textColor = model.isAttested.integerValue?[UIColor getColor:@"343434"]:[UIColor getColor:@"888888"];
 
 }
 @end

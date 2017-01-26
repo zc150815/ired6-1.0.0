@@ -121,17 +121,10 @@ static id _instanceType;
     });
 
 }
-//房屋认证数据详情
--(void)getHousingCertificationDataWithCallBack:(callBack)callBack{
+
+//新增身份认证种类列表数据
+-(void)getNewIdentityClassDataWithCallBack:(callBack)callBack{
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"HousingCertification" ofType:@"plist"];
-    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
-    callBack(dic,nil);
-
-}
-//身份认证数据详情
--(void)getIdentityCertificationDataWithCallBack:(callBack)callBack{
-
     NSString *path = [[NSBundle mainBundle] pathForResource:@"IdentityCertification" ofType:@"plist"];
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
     callBack(dic,nil);

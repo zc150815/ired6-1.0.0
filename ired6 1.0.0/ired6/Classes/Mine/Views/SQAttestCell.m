@@ -66,7 +66,8 @@
 }
 -(void)layoutSubviews{
     [super layoutSubviews];
-        _attestedNumLab.x = SQ_ScreenWidth*2/3;
+    
+    _attestedNumLab.x = SQ_ScreenWidth*2/3;
     _attestedNumLab.y = _additionalStrLab.y;
 }
 -(void)setModel:(SQAttestListModel *)model{
@@ -93,7 +94,7 @@
         _detailStrLab.hidden = YES;
         _additionalStrLab.text = model.additionalStr;
         [_additionalStrLab sizeToFit];
-        _additionalStrLab.x = _detailStrLab.x;
+        _additionalStrLab.x = _titleStrLab.x;
         _additionalStrLab.y = CGRectGetMaxY(_titleStrLab.frame) + SQ_Fit(15);
     }
     

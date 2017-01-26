@@ -8,6 +8,7 @@
 
 #import "SQMineViewController.h"
 #import "SQAttestViewController.h"
+#import "SQRedStampsController.h"
 
 
 @interface SQMineViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -71,9 +72,9 @@
     
     //积分管理
     if (indexPath.row == 2) {
-//        SQMyPointViewController *myPointVC = [[SQMyPointViewController alloc]init];
-//        [self.navigationController pushViewController:myPointVC animated:YES];
-//        return;
+        SQRedStampsController *myPointVC = [[SQRedStampsController alloc]init];
+        [self.navigationController pushViewController:myPointVC animated:YES];
+        return;
     }
 }
 

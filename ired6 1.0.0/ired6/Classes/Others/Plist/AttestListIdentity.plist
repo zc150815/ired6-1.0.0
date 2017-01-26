@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>code</key>
+	<string>100</string>
+	<key>success</key>
+	<string>1</string>
 	<key>data</key>
 	<array>
 		<dict>
@@ -11,6 +15,45 @@
 			<string>实名认证</string>
 			<key>additionalStr</key>
 			<string>姓名:张洋</string>
+			<key>detail</key>
+			<array>
+				<dict>
+					<key>item</key>
+					<string>姓名</string>
+					<key>detail</key>
+					<string>张洋</string>
+				</dict>
+				<dict>
+					<key>item</key>
+					<string>手机号码</string>
+					<key>detail</key>
+					<string>11111111</string>
+				</dict>
+				<dict>
+					<key>item</key>
+					<string>验证码</string>
+					<key>detail</key>
+					<string>11111111</string>
+				</dict>
+				<dict>
+					<key>item</key>
+					<string>性别</string>
+					<key>detail</key>
+					<string>男</string>
+				</dict>
+				<dict>
+					<key>detail</key>
+					<string>111111</string>
+					<key>item</key>
+					<string>身份证号</string>
+				</dict>
+				<dict>
+					<key>detail</key>
+					<string>111111</string>
+					<key>item</key>
+					<string>身份证照</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>isAttested</key>
@@ -19,6 +62,33 @@
 			<string>社区管理</string>
 			<key>additionalStr</key>
 			<string>负责区域:华澳中心小区</string>
+			<key>detail</key>
+			<array>
+				<dict>
+					<key>detail</key>
+					<string>管家张三</string>
+					<key>item</key>
+					<string>小区选择</string>
+				</dict>
+				<dict>
+					<key>detail</key>
+					<string>男</string>
+					<key>item</key>
+					<string>负责楼栋</string>
+				</dict>
+				<dict>
+					<key>detail</key>
+					<string>11111111</string>
+					<key>item</key>
+					<string>手机号码</string>
+				</dict>
+				<dict>
+					<key>detail</key>
+					<string>11111111</string>
+					<key>item</key>
+					<string>验证码</string>
+				</dict>
+			</array>
 		</dict>
 	</array>
 </dict>

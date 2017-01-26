@@ -10,6 +10,7 @@
 #import "SQCertificationModel.h"
 #import "SQHouseCertificationModel.h"
 
+
 @interface SQHouseCertificationCell ()
 
 @property (nonatomic, strong) UIButton *titleBtn;
@@ -23,11 +24,16 @@
     if (self = [super initWithFrame:frame]) {
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.backgroundColor = [UIColor whiteColor];
         [self setupUI];
     }
     return self;
 }
 -(void)setupUI{
+    
+    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SQ_ScreenWidth, 1)];
+    line.backgroundColor = [UIColor getColor:@"f2f2f2"];
+    [self addSubview:line];
     
     _titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_titleBtn setTitleColor:[UIColor getColor:@"343434"] forState:UIControlStateNormal];
@@ -58,6 +64,7 @@
     SQ_NSLog(@"selected = %zd",sender.selected);
 }
 
+
 -(void)setInfoModel:(SQCertificationModel *)infoModel{
     _infoModel = infoModel;
     [_titleBtn setTitle:infoModel.item forState:UIControlStateNormal];
@@ -81,11 +88,11 @@
     }
     [_titleBtn setTitle:memberModel.item forState:UIControlStateNormal];
     if (memberModel.show) {
-        _detailLab.text = [NSString stringWithFormat:@"%zd",memberModel.detailArr.count];
+        _detailLab.text = [NSString stringWithFormat:@"%zd",[memberModel.detailArr count]];
     }
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     self.userInteractionEnabled = YES;
-
+    
 }
 
 @end

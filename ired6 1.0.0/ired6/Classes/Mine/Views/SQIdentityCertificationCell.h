@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class SQCertificationModel;
+@class SQAttestListModel;
 @interface SQIdentityCertificationCell : UITableViewCell
 
 
-@property (nonatomic, strong) SQCertificationModel *model;
+@property (nonatomic, strong) SQAttestListModel *model;
 
 @end

@@ -17,6 +17,5 @@
 @property (nonatomic,assign) BOOL canSelected;
 @property (nonatomic,assign) BOOL show;
 
-@property (nonatomic, strong) SQCertificationModel *detail;
 
 @end

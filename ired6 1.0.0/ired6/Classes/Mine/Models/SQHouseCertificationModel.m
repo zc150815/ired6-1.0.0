@@ -13,9 +13,5 @@
     
 }
 
-//-(void)setDetailArr:(NSArray *)detailArr{
-//    _detailArr = detailArr;
-//    
-//    _detail = [m]
-//}
+
 @end

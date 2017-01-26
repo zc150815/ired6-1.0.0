@@ -13,4 +13,5 @@
 
 @property (nonatomic, strong) SQCertificationModel *infoModel;
 @property (nonatomic, strong) SQHouseCertificationModel *memberModel;
+
 @end

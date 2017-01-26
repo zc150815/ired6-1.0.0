@@ -84,16 +84,17 @@
 		67EB81DA1E33451600B8D2E8 /* SQIdentityCertificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB81D91E33451600B8D2E8 /* SQIdentityCertificationCell.m */; };
 		67EB81DF1E335FE000B8D2E8 /* SQHousingMemberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB81DE1E335FE000B8D2E8 /* SQHousingMemberController.m */; };
 		67EB81E21E33617100B8D2E8 /* SQHousingMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB81E11E33617100B8D2E8 /* SQHousingMemberCell.m */; };
-		67EB81FB1E345D6300B8D2E8 /* HousingCertification.json in Resources */ = {isa = PBXBuildFile; fileRef = 67EB81F81E345D6300B8D2E8 /* HousingCertification.json */; };
 		67EB81FC1E345D6300B8D2E8 /* AttestListHouse.json in Resources */ = {isa = PBXBuildFile; fileRef = 67EB81F91E345D6300B8D2E8 /* AttestListHouse.json */; };
 		67EB81FD1E345D6300B8D2E8 /* AttestListIdentity.json in Resources */ = {isa = PBXBuildFile; fileRef = 67EB81FA1E345D6300B8D2E8 /* AttestListIdentity.json */; };
 		67EB81FF1E345D8100B8D2E8 /* AttestListHouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67EB81FE1E345D8100B8D2E8 /* AttestListHouse.plist */; };
 		67EB82011E345F9B00B8D2E8 /* AttestListIdentity.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67EB82001E345F9B00B8D2E8 /* AttestListIdentity.plist */; };
-		67EB82031E34612F00B8D2E8 /* HousingCertification.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67EB82021E34612F00B8D2E8 /* HousingCertification.plist */; };
-		67EB82051E34676100B8D2E8 /* IdentityCertification.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67EB82041E34676100B8D2E8 /* IdentityCertification.plist */; };
-		67EB82071E34679100B8D2E8 /* IdentityCertification.json in Resources */ = {isa = PBXBuildFile; fileRef = 67EB82061E34679100B8D2E8 /* IdentityCertification.json */; };
-		67EB820A1E346A2500B8D2E8 /* SQHouseCertificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB82091E346A2500B8D2E8 /* SQHouseCertificationModel.m */; };
-		67EB820D1E346A6900B8D2E8 /* SQIdentityCertificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB820C1E346A6900B8D2E8 /* SQIdentityCertificationModel.m */; };
+		67EB82101E370DE700B8D2E8 /* SQIdentityMemberController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB820F1E370DE700B8D2E8 /* SQIdentityMemberController.m */; };
+		67EB82151E379B8E00B8D2E8 /* SQHouseCertificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB82121E379B8E00B8D2E8 /* SQHouseCertificationModel.m */; };
+		67EB821B1E39EE8F00B8D2E8 /* IdentityCertification.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67EB821A1E39EE8F00B8D2E8 /* IdentityCertification.plist */; };
+		67EB821E1E39F2E800B8D2E8 /* SQIdentityMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB821D1E39F2E800B8D2E8 /* SQIdentityMemberCell.m */; };
+		67EB82211E3A3ABD00B8D2E8 /* SQRedStampsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB82201E3A3ABD00B8D2E8 /* SQRedStampsController.m */; };
+		67EB82251E3A3BC500B8D2E8 /* SQRedStampsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB82241E3A3BC500B8D2E8 /* SQRedStampsModel.m */; };
+		67EB82291E3A3BF000B8D2E8 /* SQRedStampsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67EB82281E3A3BF000B8D2E8 /* SQRedStampsCell.m */; };
 		D14B3707F21A3421ACAD1312 /* libPods-ired6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A56DE935A44A17715BA1154 /* libPods-ired6.a */; };
 /* End PBXBuildFile section */
 
@@ -241,18 +242,23 @@
 		67EB81DE1E335FE000B8D2E8 /* SQHousingMemberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQHousingMemberController.m; sourceTree = "<group>"; };
 		67EB81E01E33617100B8D2E8 /* SQHousingMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQHousingMemberCell.h; sourceTree = "<group>"; };
 		67EB81E11E33617100B8D2E8 /* SQHousingMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQHousingMemberCell.m; sourceTree = "<group>"; };
-		67EB81F81E345D6300B8D2E8 /* HousingCertification.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HousingCertification.json; sourceTree = "<group>"; };
 		67EB81F91E345D6300B8D2E8 /* AttestListHouse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AttestListHouse.json; sourceTree = "<group>"; };
 		67EB81FA1E345D6300B8D2E8 /* AttestListIdentity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AttestListIdentity.json; sourceTree = "<group>"; };
 		67EB81FE1E345D8100B8D2E8 /* AttestListHouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AttestListHouse.plist; sourceTree = "<group>"; };
 		67EB82001E345F9B00B8D2E8 /* AttestListIdentity.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AttestListIdentity.plist; sourceTree = "<group>"; };
-		67EB82021E34612F00B8D2E8 /* HousingCertification.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HousingCertification.plist; sourceTree = "<group>"; };
-		67EB82041E34676100B8D2E8 /* IdentityCertification.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IdentityCertification.plist; sourceTree = "<group>"; };
-		67EB82061E34679100B8D2E8 /* IdentityCertification.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = IdentityCertification.json; sourceTree = "<group>"; };
-		67EB82081E346A2500B8D2E8 /* SQHouseCertificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQHouseCertificationModel.h; sourceTree = "<group>"; };
-		67EB82091E346A2500B8D2E8 /* SQHouseCertificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQHouseCertificationModel.m; sourceTree = "<group>"; };
-		67EB820B1E346A6900B8D2E8 /* SQIdentityCertificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQIdentityCertificationModel.h; sourceTree = "<group>"; };
-		67EB820C1E346A6900B8D2E8 /* SQIdentityCertificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQIdentityCertificationModel.m; sourceTree = "<group>"; };
+		67EB820E1E370DE700B8D2E8 /* SQIdentityMemberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQIdentityMemberController.h; sourceTree = "<group>"; };
+		67EB820F1E370DE700B8D2E8 /* SQIdentityMemberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQIdentityMemberController.m; sourceTree = "<group>"; };
+		67EB82111E379B8E00B8D2E8 /* SQHouseCertificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQHouseCertificationModel.h; sourceTree = "<group>"; };
+		67EB82121E379B8E00B8D2E8 /* SQHouseCertificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQHouseCertificationModel.m; sourceTree = "<group>"; };
+		67EB821A1E39EE8F00B8D2E8 /* IdentityCertification.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IdentityCertification.plist; sourceTree = "<group>"; };
+		67EB821C1E39F2E800B8D2E8 /* SQIdentityMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQIdentityMemberCell.h; sourceTree = "<group>"; };
+		67EB821D1E39F2E800B8D2E8 /* SQIdentityMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQIdentityMemberCell.m; sourceTree = "<group>"; };
+		67EB821F1E3A3ABC00B8D2E8 /* SQRedStampsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQRedStampsController.h; sourceTree = "<group>"; };
+		67EB82201E3A3ABD00B8D2E8 /* SQRedStampsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRedStampsController.m; sourceTree = "<group>"; };
+		67EB82231E3A3BC500B8D2E8 /* SQRedStampsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQRedStampsModel.h; sourceTree = "<group>"; };
+		67EB82241E3A3BC500B8D2E8 /* SQRedStampsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRedStampsModel.m; sourceTree = "<group>"; };
+		67EB82271E3A3BF000B8D2E8 /* SQRedStampsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQRedStampsCell.h; sourceTree = "<group>"; };
+		67EB82281E3A3BF000B8D2E8 /* SQRedStampsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRedStampsCell.m; sourceTree = "<group>"; };
 		A95F02B94ED7DC722E6ED04E /* Pods-ired6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ired6.release.xcconfig"; path = "Pods/Target Support Files/Pods-ired6/Pods-ired6.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -454,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				6730A21E1E304EB900616C70 /* Attest-认证 */,
+				67EB82221E3A3AC700B8D2E8 /* RedStamps-红票 */,
 				671BFB3B1E2337EE0030DAC9 /* SQMineViewController.h */,
 				671BFB3C1E2337EE0030DAC9 /* SQMineViewController.m */,
 			);
@@ -464,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				67EB81DB1E3345CB00B8D2E8 /* Attest-认证 */,
+				67EB82261E3A3BC900B8D2E8 /* RedStamps-红票 */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -472,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				67EB81DC1E3345D700B8D2E8 /* Attest-认证 */,
+				67EB822A1E3A3BF400B8D2E8 /* RedStamps-红票 */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -578,6 +587,8 @@
 				67EB81DE1E335FE000B8D2E8 /* SQHousingMemberController.m */,
 				6730A2221E30505300616C70 /* SQIdentityCertificationController.h */,
 				6730A2231E30505300616C70 /* SQIdentityCertificationController.m */,
+				67EB820E1E370DE700B8D2E8 /* SQIdentityMemberController.h */,
+				67EB820F1E370DE700B8D2E8 /* SQIdentityMemberController.m */,
 			);
 			name = "Attest-认证";
 			sourceTree = "<group>";
@@ -598,10 +609,7 @@
 				67EB81F91E345D6300B8D2E8 /* AttestListHouse.json */,
 				67EB82001E345F9B00B8D2E8 /* AttestListIdentity.plist */,
 				67EB81FA1E345D6300B8D2E8 /* AttestListIdentity.json */,
-				67EB81F81E345D6300B8D2E8 /* HousingCertification.json */,
-				67EB82021E34612F00B8D2E8 /* HousingCertification.plist */,
-				67EB82041E34676100B8D2E8 /* IdentityCertification.plist */,
-				67EB82061E34679100B8D2E8 /* IdentityCertification.json */,
+				67EB821A1E39EE8F00B8D2E8 /* IdentityCertification.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -756,12 +764,10 @@
 			children = (
 				67EB81C91E31AB1F00B8D2E8 /* SQAttestListModel.h */,
 				67EB81CA1E31AB1F00B8D2E8 /* SQAttestListModel.m */,
-				67EB82081E346A2500B8D2E8 /* SQHouseCertificationModel.h */,
-				67EB82091E346A2500B8D2E8 /* SQHouseCertificationModel.m */,
-				67EB820B1E346A6900B8D2E8 /* SQIdentityCertificationModel.h */,
-				67EB820C1E346A6900B8D2E8 /* SQIdentityCertificationModel.m */,
 				67EB81CC1E31E5BB00B8D2E8 /* SQCertificationModel.h */,
 				67EB81CD1E31E5BB00B8D2E8 /* SQCertificationModel.m */,
+				67EB82111E379B8E00B8D2E8 /* SQHouseCertificationModel.h */,
+				67EB82121E379B8E00B8D2E8 /* SQHouseCertificationModel.m */,
 			);
 			name = "Attest-认证";
 			sourceTree = "<group>";
@@ -777,8 +783,37 @@
 				67EB81E11E33617100B8D2E8 /* SQHousingMemberCell.m */,
 				67EB81D81E33451600B8D2E8 /* SQIdentityCertificationCell.h */,
 				67EB81D91E33451600B8D2E8 /* SQIdentityCertificationCell.m */,
+				67EB821C1E39F2E800B8D2E8 /* SQIdentityMemberCell.h */,
+				67EB821D1E39F2E800B8D2E8 /* SQIdentityMemberCell.m */,
 			);
 			name = "Attest-认证";
+			sourceTree = "<group>";
+		};
+		67EB82221E3A3AC700B8D2E8 /* RedStamps-红票 */ = {
+			isa = PBXGroup;
+			children = (
+				67EB821F1E3A3ABC00B8D2E8 /* SQRedStampsController.h */,
+				67EB82201E3A3ABD00B8D2E8 /* SQRedStampsController.m */,
+			);
+			name = "RedStamps-红票";
+			sourceTree = "<group>";
+		};
+		67EB82261E3A3BC900B8D2E8 /* RedStamps-红票 */ = {
+			isa = PBXGroup;
+			children = (
+				67EB82231E3A3BC500B8D2E8 /* SQRedStampsModel.h */,
+				67EB82241E3A3BC500B8D2E8 /* SQRedStampsModel.m */,
+			);
+			name = "RedStamps-红票";
+			sourceTree = "<group>";
+		};
+		67EB822A1E3A3BF400B8D2E8 /* RedStamps-红票 */ = {
+			isa = PBXGroup;
+			children = (
+				67EB82271E3A3BF000B8D2E8 /* SQRedStampsCell.h */,
+				67EB82281E3A3BF000B8D2E8 /* SQRedStampsCell.m */,
+			);
+			name = "RedStamps-红票";
 			sourceTree = "<group>";
 		};
 		C5065E8384B510267F760722 /* Frameworks */ = {
@@ -861,7 +896,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67EB81FB1E345D6300B8D2E8 /* HousingCertification.json in Resources */,
 				67EB81FF1E345D8100B8D2E8 /* AttestListHouse.plist in Resources */,
 				6767AEEF1E2E1E5C00822AD9 /* image1.jpg in Resources */,
 				6767AEF81E2E1E5C00822AD9 /* video1.mp4 in Resources */,
@@ -869,9 +903,7 @@
 				671BFB0C1E232D260030DAC9 /* Assets.xcassets in Resources */,
 				67E942C81E2716C1007D5637 /* sound.caf in Resources */,
 				67EB81FD1E345D6300B8D2E8 /* AttestListIdentity.json in Resources */,
-				67EB82071E34679100B8D2E8 /* IdentityCertification.json in Resources */,
 				6767AEF01E2E1E5C00822AD9 /* image11.gif in Resources */,
-				67EB82031E34612F00B8D2E8 /* HousingCertification.plist in Resources */,
 				6767AEF11E2E1E5C00822AD9 /* image12.gif in Resources */,
 				67EB81FC1E345D6300B8D2E8 /* AttestListHouse.json in Resources */,
 				6767AEF51E2E1E5C00822AD9 /* LaunchImageAd.json in Resources */,
@@ -879,10 +911,10 @@
 				6767AEF21E2E1E5C00822AD9 /* image2.jpg in Resources */,
 				6767AEF61E2E1E5C00822AD9 /* LaunchVideoAd.json in Resources */,
 				67EB82011E345F9B00B8D2E8 /* AttestListIdentity.plist in Resources */,
+				67EB821B1E39EE8F00B8D2E8 /* IdentityCertification.plist in Resources */,
 				6767AEF41E2E1E5C00822AD9 /* image4.jpg in Resources */,
 				671BFB0A1E232D260030DAC9 /* Main.storyboard in Resources */,
 				6767AEF71E2E1E5C00822AD9 /* video0.mp4 in Resources */,
-				67EB82051E34676100B8D2E8 /* IdentityCertification.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -944,6 +976,7 @@
 				671BFB541E2338D50030DAC9 /* UIButton+ZCExtension.m in Sources */,
 				67EB81D71E33402500B8D2E8 /* SQHouseCertificationCell.m in Sources */,
 				67E942C61E2716C1007D5637 /* SGScanningQRCodeVC.m in Sources */,
+				67EB82151E379B8E00B8D2E8 /* SQHouseCertificationModel.m in Sources */,
 				671BFB3A1E2337E20030DAC9 /* SQShoppingViewController.m in Sources */,
 				671BFB561E2338D50030DAC9 /* UILabel+ZCExtension.m in Sources */,
 				674573461E28634E00421D76 /* SQLocationViewController.m in Sources */,
@@ -960,13 +993,12 @@
 				67E942C41E2716C1007D5637 /* ScanSuccessJumpVC.m in Sources */,
 				6767AED21E2E1C9500822AD9 /* XHLaunchAdDownloader.m in Sources */,
 				671BFB041E232D260030DAC9 /* AppDelegate.m in Sources */,
-				67EB820A1E346A2500B8D2E8 /* SQHouseCertificationModel.m in Sources */,
 				6790C5F01E24BB9F007F4237 /* UIColor+ZCExtension.m in Sources */,
+				67EB82251E3A3BC500B8D2E8 /* SQRedStampsModel.m in Sources */,
 				671BFB581E2338D50030DAC9 /* UIView+ZCExtension.m in Sources */,
 				672602E71E2E22550078031C /* AppDelegate+XHLaunchAd.m in Sources */,
 				6767AED31E2E1C9500822AD9 /* XHLaunchAdImageManager.m in Sources */,
 				671BFB371E2337D50030DAC9 /* SQLifeViewController.m in Sources */,
-				67EB820D1E346A6900B8D2E8 /* SQIdentityCertificationModel.m in Sources */,
 				6767AECD1E2E1C9500822AD9 /* XHLaunchAd.m in Sources */,
 				6767AED11E2E1C9500822AD9 /* XHLaunchAdDownload.m in Sources */,
 				671BFB681E234ECC0030DAC9 /* SQLoginViewController.m in Sources */,
@@ -974,6 +1006,7 @@
 				672602F21E2F455D0078031C /* SQWebViewController.m in Sources */,
 				6767AED91E2E1CE800822AD9 /* Network.m in Sources */,
 				6790C5EC1E24B975007F4237 /* DeformationButton.m in Sources */,
+				67EB82101E370DE700B8D2E8 /* SQIdentityMemberController.m in Sources */,
 				6790C5F91E25D130007F4237 /* SQForgetView.m in Sources */,
 				6767AECE1E2E1C9500822AD9 /* XHLaunchAdButton.m in Sources */,
 				674573391E275BA500421D76 /* DisplayView.m in Sources */,
@@ -986,8 +1019,11 @@
 				67EB81CB1E31AB1F00B8D2E8 /* SQAttestListModel.m in Sources */,
 				67EB81DA1E33451600B8D2E8 /* SQIdentityCertificationCell.m in Sources */,
 				6790C5ED1E24B975007F4237 /* MMMaterialDesignSpinner.m in Sources */,
+				67EB82211E3A3ABD00B8D2E8 /* SQRedStampsController.m in Sources */,
+				67EB821E1E39F2E800B8D2E8 /* SQIdentityMemberCell.m in Sources */,
 				671BFB531E2338D50030DAC9 /* UIBarButtonItem+ZCExtension.m in Sources */,
 				67E942CA1E2716C1007D5637 /* SGScanningQRCodeView.m in Sources */,
+				67EB82291E3A3BF000B8D2E8 /* SQRedStampsCell.m in Sources */,
 				671BFB341E2337C70030DAC9 /* SQHomePageViewController.m in Sources */,
 				6767AED51E2E1C9500822AD9 /* XHLaunchImageView.m in Sources */,
 				6767AED01E2E1C9500822AD9 /* XHLaunchAdConfiguration.m in Sources */,

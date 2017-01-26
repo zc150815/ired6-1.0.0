@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class SQCertificationModel;
 @interface SQAttestListModel : NSObject
 
 //认证管理首页内容model
@@ -17,11 +18,13 @@
 @property (nonatomic,copy) NSString *additionalStr; //补充内容
 @property (nonatomic,copy) NSString *attestedNum;   //认证数量
 
-//房屋认证内容model
 
+@property (nonatomic, strong) NSArray *required;//房屋认证房屋信息
+@property (nonatomic, strong) NSArray *optional;//房屋认证成员信息
 
+@property (nonatomic, strong) NSArray<SQCertificationModel*> *detail;
 
-//身份认证内容model
+@property (nonatomic,copy) NSString *titleImage;//身份认证种类页图标
 
 
 

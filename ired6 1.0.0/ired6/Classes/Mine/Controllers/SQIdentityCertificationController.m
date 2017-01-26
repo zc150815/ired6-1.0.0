@@ -7,8 +7,11 @@
 //
 
 #import "SQIdentityCertificationController.h"
-#import "SQCertificationModel.h"
+#import "SQIdentityMemberController.h"
 #import "SQIdentityCertificationCell.h"
+
+#import "SQAttestListModel.h"
+#import "SQCertificationModel.h"
 
 @interface SQIdentityCertificationController ()
 
@@ -21,17 +24,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *array = @[
-                        @{@"state":@"1",@"itemImage":@"realName",@"itemStr":@"实名认证"},
-                        @{@"state":@"1",@"itemImage":@"merchantStaff",@"itemStr":@"商户服务人员"},
-                        @{@"state":@"0",@"itemImage":@"communityStaff",@"itemStr":@"社区工作人员"},
-                        @{@"state":@"0",@"itemImage":@"Housekeeper",@"itemStr":@"社区管理认证"}
-                       ];
-    self.dataArr = [SQCertificationModel mj_objectArrayWithKeyValuesArray:array];
+    [self loadData];
+    [self setupUI];
+    
+}
+-(void)setupUI{
     
     self.tableView.backgroundColor = [UIColor getColor:@"f2f2f2"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.bounces = NO;
+}
+
+-(void)loadData{
+    
+    [[SQNetworkingTools sharedNetWorkingTools] getNewIdentityClassDataWithCallBack:^(id response, NSError *error) {
+        if (error) {
+            [[SQPublicTools sharedPublicTools]showMessage:@"数据获取错误" duration:3];
+            return ;
+        }
+        
+        if ([response isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *dic = (NSDictionary*)response;
+            self.dataArr = [SQAttestListModel mj_objectArrayWithKeyValuesArray:dic[@"data"]];
+            [self.tableView reloadData];
+        }
+        
+    }];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -41,12 +59,21 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     SQIdentityCertificationCell *cell = [[SQIdentityCertificationCell alloc]init];
-    
-    cell.model = self.dataArr[indexPath.row];
+    SQAttestListModel *model = self.dataArr[indexPath.row];
+    cell.model = model;
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return SQ_Fit(48);
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    SQIdentityMemberController *memberVC = [[SQIdentityMemberController alloc]init];
+    memberVC.canEdit = YES;
+    SQAttestListModel *identityModel = self.dataArr[indexPath.row];
+    memberVC.title = identityModel.titleStr;
+    memberVC.model = identityModel;
+    [self.navigationController pushViewController:memberVC animated:YES];
 }
 @end

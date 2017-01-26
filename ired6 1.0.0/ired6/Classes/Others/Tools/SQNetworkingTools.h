@@ -17,7 +17,7 @@ typedef enum : NSUInteger {
     POST = 1,
 } RequestType;
 
-typedef void (^callBack)(NSDictionary* response,NSError* error);
+typedef void (^callBack)(id response,NSError* error);
 
 @interface SQNetworkingTools : AFHTTPSessionManager
 
@@ -37,8 +37,6 @@ typedef void (^callBack)(NSDictionary* response,NSError* error);
 -(void)getAttestListHouseDataWithCallBack:(callBack)callBack;
 //认证管理页身份认证数据列表
 -(void)getAttestListIdentityDataWithCallBack:(callBack)callBack;
-//房屋认证数据详情
--(void)getHousingCertificationDataWithCallBack:(callBack)callBack;
-//身份认证数据详情
--(void)getIdentityCertificationDataWithCallBack:(callBack)callBack;
+//新增身份认证种类列表数据
+-(void)getNewIdentityClassDataWithCallBack:(callBack)callBack;
 @end
