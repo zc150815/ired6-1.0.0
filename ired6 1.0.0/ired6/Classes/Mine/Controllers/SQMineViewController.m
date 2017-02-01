@@ -72,7 +72,7 @@
     
     //积分管理
     if (indexPath.row == 2) {
-        SQRedStampsController *myPointVC = [[SQRedStampsController alloc]init];
+        SQRedStampsController *myPointVC = [[SQRedStampsController alloc]initWithStyle:UITableViewStyleGrouped];
         [self.navigationController pushViewController:myPointVC animated:YES];
         return;
     }

@@ -119,13 +119,28 @@ static id _instanceType;
         NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
         callBack(dic,nil);
     });
-
 }
 
 //新增身份认证种类列表数据
 -(void)getNewIdentityClassDataWithCallBack:(callBack)callBack{
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"IdentityCertification" ofType:@"plist"];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    callBack(dic,nil);
+}
+
+//红票列表数据
+-(void)getRedStampsDataWithCallBack:(callBack)callBack{
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"RedStampsList" ofType:@"plist"];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    callBack(dic,nil);
+}
+
+//猜你喜欢数据
+-(void)getGuessYouLikeDataWithCallBack:(callBack)callBack{
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"GuessYouLikeList" ofType:@"plist"];
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
     callBack(dic,nil);
 }

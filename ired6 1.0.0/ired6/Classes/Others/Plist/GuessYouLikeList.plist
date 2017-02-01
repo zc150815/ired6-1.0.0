@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>success</key>
+	<string>yes</string>
+	<key>data</key>
+	<array>
+		<dict>
+			<key>ProductImage</key>
+			<string>product000</string>
+			<key>ProductTitle</key>
+			<string>Apple iPhone 7 (A1660) 32G 玫瑰金色 移动联通电信4G手机</string>
+			<key>CurrentPrice</key>
+			<string>99</string>
+			<key>OriginalPrice</key>
+			<string>199</string>
+		</dict>
+		<dict>
+			<key>ProductImage</key>
+			<string>product001</string>
+			<key>ProductTitle</key>
+			<string>Apple iPhone 6s (A1700) 32G 玫瑰金色 移动联通电信4G手机</string>
+			<key>CurrentPrice</key>
+			<string>199</string>
+			<key>OriginalPrice</key>
+			<string>299</string>
+		</dict>
+		<dict>
+			<key>ProductImage</key>
+			<string>product002</string>
+			<key>ProductTitle</key>
+			<string>Apple iPhone SE (A1723) 64G 玫瑰金色 移动联通电信4G手机</string>
+			<key>CurrentPrice</key>
+			<string>299</string>
+			<key>OriginalPrice</key>
+			<string>399</string>
+		</dict>
+		<dict>
+			<key>ProductImage</key>
+			<string>product000</string>
+			<key>ProductTitle</key>
+			<string>苹果 Apple iPhone 7 Plus 移动联通电信4G手机 亮黑色 128G</string>
+			<key>CurrentPrice</key>
+			<string>399</string>
+			<key>OriginalPrice</key>
+			<string>499</string>
+		</dict>
+		<dict>
+			<key>ProductImage</key>
+			<string>product001</string>
+			<key>ProductTitle</key>
+			<string>苹果 Apple iPhone 6s 苹果6S 苹果手机 金色 32GB(全网通)</string>
+			<key>CurrentPrice</key>
+			<string>499</string>
+			<key>OriginalPrice</key>
+			<string>599</string>
+		</dict>
+		<dict>
+			<key>ProductImage</key>
+			<string>product002</string>
+			<key>ProductTitle</key>
+			<string>小米 Max 全网通 4GB内存 128GB ROM 金色 移动联通电信4G手机</string>
+			<key>CurrentPrice</key>
+			<string>599</string>
+			<key>OriginalPrice</key>
+			<string>699</string>
+		</dict>
+		<dict>
+			<key>ProductImage</key>
+			<string>product000</string>
+			<key>ProductTitle</key>
+			<string>小米4A 红米4A 全网通4G手机 香槟金 全网通(2G RAM+16G ROM)</string>
+			<key>CurrentPrice</key>
+			<string>699</string>
+			<key>OriginalPrice</key>
+			<string>799</string>
+		</dict>
+		<dict>
+			<key>ProductImage</key>
+			<string>product001</string>
+			<key>ProductTitle</key>
+			<string>小米（MI）红米Note3手机 双卡双待 金色 全网通4G(2G RAM+16G ROM)标配版</string>
+			<key>CurrentPrice</key>
+			<string>799</string>
+			<key>OriginalPrice</key>
+			<string>899</string>
+		</dict>
+		<dict>
+			<key>ProductImage</key>
+			<string>product002</string>
+			<key>ProductTitle</key>
+			<string>小米(MI) 小米MIX 4G手机 双卡双待 陶瓷黑 全网通尊享版(6G RAM+256G ROM)标</string>
+			<key>CurrentPrice</key>
+			<string>899</string>
+			<key>OriginalPrice</key>
+			<string>999</string>
+		</dict>
+		<dict>
+			<key>ProductImage</key>
+			<string>product000</string>
+			<key>ProductTitle</key>
+			<string>小米 红米3X 手机 金色 全网通4G (2G RAM+32G ROM) 标配</string>
+			<key>CurrentPrice</key>
+			<string>999</string>
+			<key>OriginalPrice</key>
+			<string>1999</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>success</key>
+	<string></string>
+	<key>data</key>
+	<array>
+		<dict>
+			<key>itemStr</key>
+			<string>使用明细</string>
+			<key>itemImage</key>
+			<string>useDetails</string>
+			<key>detail</key>
+			<array>
+				<dict>
+					<key>type</key>
+					<string>商品消费扣除</string>
+					<key>number</key>
+					<string>1000</string>
+					<key>time</key>
+					<string>2017/01/20 12:25:13</string>
+				</dict>
+				<dict>
+					<key>type</key>
+					<string>商品消费扣除</string>
+					<key>number</key>
+					<string>100</string>
+					<key>time</key>
+					<string>2017/02/20 12:25:13</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>itemStr</key>
+			<string>获取详情</string>
+			<key>itemImage</key>
+			<string>profitDetails</string>
+			<key>detail</key>
+			<array>
+				<dict>
+					<key>type</key>
+					<string>购物获红票</string>
+					<key>number</key>
+					<string>1000</string>
+					<key>time</key>
+					<string>2017/01/20 12:25:13</string>
+				</dict>
+				<dict>
+					<key>type</key>
+					<string>签到获红票</string>
+					<key>number</key>
+					<string>100</string>
+					<key>time</key>
+					<string>2017/02/20 12:25:13</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -79,6 +79,9 @@
     return cell;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return SQ_Fit(48);
+}
 -(void)setModel:(SQAttestListModel *)model{
     _model = model;
     

@@ -44,6 +44,7 @@
     bar.shadowImage = [UIImage alloc];
     bar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor getColor:@"FFFFFF"],
                                 NSFontAttributeName:SQ_Font(17)};
+//    [bar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
 }
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{

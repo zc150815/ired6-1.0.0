@@ -10,4 +10,10 @@
 
 @interface SQRedStampsModel : NSObject
 
+@property (nonatomic,copy) NSString *itemStr;
+@property (nonatomic,copy) NSString *itemImage;
+@property (nonatomic, strong) NSArray *detail;
+
+
+
 @end

@@ -39,4 +39,8 @@ typedef void (^callBack)(id response,NSError* error);
 -(void)getAttestListIdentityDataWithCallBack:(callBack)callBack;
 //新增身份认证种类列表数据
 -(void)getNewIdentityClassDataWithCallBack:(callBack)callBack;
+//红票列表数据
+-(void)getRedStampsDataWithCallBack:(callBack)callBack;
+//猜你喜欢数据
+-(void)getGuessYouLikeDataWithCallBack:(callBack)callBack;
 @end

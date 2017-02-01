@@ -62,6 +62,12 @@
 		6767AEF61E2E1E5C00822AD9 /* LaunchVideoAd.json in Resources */ = {isa = PBXBuildFile; fileRef = 6767AEEB1E2E1E5C00822AD9 /* LaunchVideoAd.json */; };
 		6767AEF71E2E1E5C00822AD9 /* video0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6767AEEC1E2E1E5C00822AD9 /* video0.mp4 */; };
 		6767AEF81E2E1E5C00822AD9 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6767AEED1E2E1E5C00822AD9 /* video1.mp4 */; };
+		6775B5581E3E041D003DF6B5 /* SQRedStampsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775B5571E3E041D003DF6B5 /* SQRedStampsHeaderView.m */; };
+		6775B55A1E3E06B0003DF6B5 /* RedStampsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6775B5591E3E06B0003DF6B5 /* RedStampsList.plist */; };
+		6775B55D1E3F310F003DF6B5 /* SQRedStampsDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775B55C1E3F310F003DF6B5 /* SQRedStampsDetailsModel.m */; };
+		6775B5601E3F36A2003DF6B5 /* SQRedStampsDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775B55F1E3F36A2003DF6B5 /* SQRedStampsDetailsController.m */; };
+		6775B5631E3F3FCC003DF6B5 /* SQRedStampsDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775B5621E3F3FCC003DF6B5 /* SQRedStampsDetailCell.m */; };
+		6775B5651E3F60BC003DF6B5 /* GuessYouLikeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6775B5641E3F60BC003DF6B5 /* GuessYouLikeList.plist */; };
 		6790C5EC1E24B975007F4237 /* DeformationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6790C5E81E24B975007F4237 /* DeformationButton.m */; };
 		6790C5ED1E24B975007F4237 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6790C5EB1E24B975007F4237 /* MMMaterialDesignSpinner.m */; };
 		6790C5F01E24BB9F007F4237 /* UIColor+ZCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6790C5EF1E24BB9F007F4237 /* UIColor+ZCExtension.m */; };
@@ -199,6 +205,16 @@
 		6767AEEB1E2E1E5C00822AD9 /* LaunchVideoAd.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LaunchVideoAd.json; sourceTree = "<group>"; };
 		6767AEEC1E2E1E5C00822AD9 /* video0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video0.mp4; sourceTree = "<group>"; };
 		6767AEED1E2E1E5C00822AD9 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
+		6775B5561E3E041D003DF6B5 /* SQRedStampsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQRedStampsHeaderView.h; sourceTree = "<group>"; };
+		6775B5571E3E041D003DF6B5 /* SQRedStampsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRedStampsHeaderView.m; sourceTree = "<group>"; };
+		6775B5591E3E06B0003DF6B5 /* RedStampsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RedStampsList.plist; sourceTree = "<group>"; };
+		6775B55B1E3F310F003DF6B5 /* SQRedStampsDetailsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQRedStampsDetailsModel.h; sourceTree = "<group>"; };
+		6775B55C1E3F310F003DF6B5 /* SQRedStampsDetailsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRedStampsDetailsModel.m; sourceTree = "<group>"; };
+		6775B55E1E3F36A2003DF6B5 /* SQRedStampsDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQRedStampsDetailsController.h; sourceTree = "<group>"; };
+		6775B55F1E3F36A2003DF6B5 /* SQRedStampsDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRedStampsDetailsController.m; sourceTree = "<group>"; };
+		6775B5611E3F3FCC003DF6B5 /* SQRedStampsDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQRedStampsDetailCell.h; sourceTree = "<group>"; };
+		6775B5621E3F3FCC003DF6B5 /* SQRedStampsDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRedStampsDetailCell.m; sourceTree = "<group>"; };
+		6775B5641E3F60BC003DF6B5 /* GuessYouLikeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GuessYouLikeList.plist; sourceTree = "<group>"; };
 		6790C5E71E24B975007F4237 /* DeformationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeformationButton.h; sourceTree = "<group>"; };
 		6790C5E81E24B975007F4237 /* DeformationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeformationButton.m; sourceTree = "<group>"; };
 		6790C5EA1E24B975007F4237 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
@@ -610,6 +626,8 @@
 				67EB82001E345F9B00B8D2E8 /* AttestListIdentity.plist */,
 				67EB81FA1E345D6300B8D2E8 /* AttestListIdentity.json */,
 				67EB821A1E39EE8F00B8D2E8 /* IdentityCertification.plist */,
+				6775B5591E3E06B0003DF6B5 /* RedStampsList.plist */,
+				6775B5641E3F60BC003DF6B5 /* GuessYouLikeList.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -794,6 +812,8 @@
 			children = (
 				67EB821F1E3A3ABC00B8D2E8 /* SQRedStampsController.h */,
 				67EB82201E3A3ABD00B8D2E8 /* SQRedStampsController.m */,
+				6775B55E1E3F36A2003DF6B5 /* SQRedStampsDetailsController.h */,
+				6775B55F1E3F36A2003DF6B5 /* SQRedStampsDetailsController.m */,
 			);
 			name = "RedStamps-红票";
 			sourceTree = "<group>";
@@ -803,6 +823,8 @@
 			children = (
 				67EB82231E3A3BC500B8D2E8 /* SQRedStampsModel.h */,
 				67EB82241E3A3BC500B8D2E8 /* SQRedStampsModel.m */,
+				6775B55B1E3F310F003DF6B5 /* SQRedStampsDetailsModel.h */,
+				6775B55C1E3F310F003DF6B5 /* SQRedStampsDetailsModel.m */,
 			);
 			name = "RedStamps-红票";
 			sourceTree = "<group>";
@@ -812,6 +834,10 @@
 			children = (
 				67EB82271E3A3BF000B8D2E8 /* SQRedStampsCell.h */,
 				67EB82281E3A3BF000B8D2E8 /* SQRedStampsCell.m */,
+				6775B5611E3F3FCC003DF6B5 /* SQRedStampsDetailCell.h */,
+				6775B5621E3F3FCC003DF6B5 /* SQRedStampsDetailCell.m */,
+				6775B5561E3E041D003DF6B5 /* SQRedStampsHeaderView.h */,
+				6775B5571E3E041D003DF6B5 /* SQRedStampsHeaderView.m */,
 			);
 			name = "RedStamps-红票";
 			sourceTree = "<group>";
@@ -898,12 +924,14 @@
 			files = (
 				67EB81FF1E345D8100B8D2E8 /* AttestListHouse.plist in Resources */,
 				6767AEEF1E2E1E5C00822AD9 /* image1.jpg in Resources */,
+				6775B5651E3F60BC003DF6B5 /* GuessYouLikeList.plist in Resources */,
 				6767AEF81E2E1E5C00822AD9 /* video1.mp4 in Resources */,
 				6767AEEE1E2E1E5C00822AD9 /* image0.jpg in Resources */,
 				671BFB0C1E232D260030DAC9 /* Assets.xcassets in Resources */,
 				67E942C81E2716C1007D5637 /* sound.caf in Resources */,
 				67EB81FD1E345D6300B8D2E8 /* AttestListIdentity.json in Resources */,
 				6767AEF01E2E1E5C00822AD9 /* image11.gif in Resources */,
+				6775B55A1E3E06B0003DF6B5 /* RedStampsList.plist in Resources */,
 				6767AEF11E2E1E5C00822AD9 /* image12.gif in Resources */,
 				67EB81FC1E345D6300B8D2E8 /* AttestListHouse.json in Resources */,
 				6767AEF51E2E1E5C00822AD9 /* LaunchImageAd.json in Resources */,
@@ -991,6 +1019,7 @@
 				674573431E277D4600421D76 /* CLLocation+YCLocation.m in Sources */,
 				671BFB3D1E2337EE0030DAC9 /* SQMineViewController.m in Sources */,
 				67E942C41E2716C1007D5637 /* ScanSuccessJumpVC.m in Sources */,
+				6775B5601E3F36A2003DF6B5 /* SQRedStampsDetailsController.m in Sources */,
 				6767AED21E2E1C9500822AD9 /* XHLaunchAdDownloader.m in Sources */,
 				671BFB041E232D260030DAC9 /* AppDelegate.m in Sources */,
 				6790C5F01E24BB9F007F4237 /* UIColor+ZCExtension.m in Sources */,
@@ -1005,8 +1034,10 @@
 				671BFB6F1E24750F0030DAC9 /* SQPublicTools.m in Sources */,
 				672602F21E2F455D0078031C /* SQWebViewController.m in Sources */,
 				6767AED91E2E1CE800822AD9 /* Network.m in Sources */,
+				6775B55D1E3F310F003DF6B5 /* SQRedStampsDetailsModel.m in Sources */,
 				6790C5EC1E24B975007F4237 /* DeformationButton.m in Sources */,
 				67EB82101E370DE700B8D2E8 /* SQIdentityMemberController.m in Sources */,
+				6775B5631E3F3FCC003DF6B5 /* SQRedStampsDetailCell.m in Sources */,
 				6790C5F91E25D130007F4237 /* SQForgetView.m in Sources */,
 				6767AECE1E2E1C9500822AD9 /* XHLaunchAdButton.m in Sources */,
 				674573391E275BA500421D76 /* DisplayView.m in Sources */,
@@ -1026,6 +1057,7 @@
 				67EB82291E3A3BF000B8D2E8 /* SQRedStampsCell.m in Sources */,
 				671BFB341E2337C70030DAC9 /* SQHomePageViewController.m in Sources */,
 				6767AED51E2E1C9500822AD9 /* XHLaunchImageView.m in Sources */,
+				6775B5581E3E041D003DF6B5 /* SQRedStampsHeaderView.m in Sources */,
 				6767AED01E2E1C9500822AD9 /* XHLaunchAdConfiguration.m in Sources */,
 				6767AED41E2E1C9500822AD9 /* XHLaunchAdView.m in Sources */,
 				671BFB301E2336F50030DAC9 /* SQNavigationController.m in Sources */,
