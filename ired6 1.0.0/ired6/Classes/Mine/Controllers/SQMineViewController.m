@@ -9,11 +9,12 @@
 #import "SQMineViewController.h"
 #import "SQAttestViewController.h"
 #import "SQRedStampsController.h"
+#import "SQMyOrderView.h"
+#import "OrderListViewController.h"
 
+@interface SQMineViewController ()<UITableViewDelegate,UITableViewDataSource,SQMyOrderViewDelegate>
 
-@interface SQMineViewController ()<UITableViewDelegate,UITableViewDataSource>
-
-@property (nonatomic, strong) NSArray *testDataArr;
+@property (nonatomic, strong) NSArray *dataArr;
 
 @end
 
@@ -21,39 +22,114 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.testDataArr = @[@"退出登录",@"认证管理",@"积分管理"];
-    [self test];
+    
+    self.dataArr = @[@[@"订单管理"],@[@"退出登录",@"认证管理",@"积分管理"]];
+    [self setupUI];
 }
 
-
-//测试用按钮
--(void)test{
+-(void)setupUI{
     
-    UITableView *testTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SQ_ScreenWidth, SQ_ScreenHeight-70)];
+    UITableView *mineTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SQ_ScreenWidth, SQ_ScreenHeight-70) style:UITableViewStyleGrouped];
+    mineTableView.delegate = self;
+    mineTableView.dataSource = self;
+    mineTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [mineTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellcell"];
+    [self.view addSubview:mineTableView];
     
-    testTableView.delegate = self;
-    testTableView.dataSource = self;
-    [testTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellcell"];
-    [self.view addSubview:testTableView];
+    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SQ_ScreenWidth, SQ_Fit(100))];
+    headerView.backgroundColor = [UIColor redColor];
+    mineTableView.tableHeaderView = headerView;
 }
 
+#pragma mark
+#pragma mark UITableView代理方法
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.dataArr.count;
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return self.testDataArr.count;
+    return [self.dataArr[section] count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellcell" forIndexPath:indexPath];
-    cell.textLabel.text = self.testDataArr[indexPath.row];
+    cell.textLabel.text = self.dataArr[indexPath.section][indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    if (indexPath.section == 0) {
+        UILabel *label = [[UILabel alloc]init];
+        label.text = @"查看全部";
+        label.textColor = [UIColor grayColor];
+        label.font = SQ_Font(SQ_Fit(15));
+        label.textAlignment = NSTextAlignmentRight;
+        [label sizeToFit];
+        cell.accessoryView = label;
+    }
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self buttonClick:indexPath];
+    
+    if (indexPath.section == 0) {
+        [[SQPublicTools sharedPublicTools]showMessage:@"查看全部" duration:3];
+        UIButton *allBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        allBtn.tag = 1000;
+        [self myOrderView:nil myOrderButtonActiton:allBtn];
+    }
+    
+    if (indexPath.section == 1) {
+        [self buttonClick:indexPath];
+    }
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    
+    if (section == 0) {
+        SQMyOrderView *myOrderView = [[SQMyOrderView alloc]initWithFrame:CGRectMake(0, 0, SQ_ScreenWidth, SQ_Fit(50))];
+        myOrderView.delegate = self;
+        return myOrderView;
+    }
+    return nil;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    if (section == 0) {
+        return SQ_Fit(60);
+    }
+    return 0.01;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return SQ_Fit(48);
+}
+#pragma mark
+#pragma mark SQMyOrderViewDelegate代理方法
+-(void)myOrderView:(SQMyOrderView *)myOrderView myOrderButtonActiton:(UIButton *)sender{
+    
+    OrderListViewController *orderList = [[OrderListViewController alloc]init];
+    switch (sender.tag) {
+        case 1000:
+            orderList.orderListType = 1000;
+            break;
+        case 1001:
+            orderList.orderListType = 1001;
+            break;
+        case 1002:
+            orderList.orderListType = 1002;
+            break;
+        case 1003:
+            orderList.orderListType = 1003;
+            break;
+        case 1004:
+            orderList.orderListType = 1004;
+            break;
+        case 1005:
+            orderList.orderListType = 1005;
+            break;
+        default:
+            break;
+    }
+    [self.navigationController pushViewController:orderList animated:YES];
 }
 
-//测试用按钮点击方法
 -(void)buttonClick:(NSIndexPath*)indexPath{
     
     //退出登录

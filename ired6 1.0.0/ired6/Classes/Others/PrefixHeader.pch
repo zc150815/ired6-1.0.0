@@ -28,7 +28,7 @@
 #define SQ_GlobalRBG SQ_RGBColor(240, 240, 240)
 #define SQ_DarkGrewColor SQ_RGBColor(85, 85, 85)
 #define SQ_LightGrewColor SQ_RGBColor(136, 136, 136)
-
+#define SQ_NavightionBarHeight 64
 
 
 #import "UIView+ZCExtension.h"

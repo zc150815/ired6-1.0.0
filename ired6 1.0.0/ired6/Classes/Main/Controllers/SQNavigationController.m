@@ -159,7 +159,7 @@
 }
 //消息列表
 -(void)messageButtonClick:(UIButton*)sender{
-    SQ_NSLog(@"消息列表");
+    
 }
 -(void)dealloc{
     

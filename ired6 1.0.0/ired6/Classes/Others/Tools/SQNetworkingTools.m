@@ -34,12 +34,15 @@
     }];
 }
 //MARK: 单例创建对象
-static id _instanceType;
+static SQNetworkingTools* _instanceType;
 +(instancetype)sharedNetWorkingTools
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _instanceType = [[self alloc]init];
+        _instanceType.requestSerializer = [AFHTTPRequestSerializer serializer];
+        _instanceType.responseSerializer = [AFHTTPResponseSerializer serializer];
+
     });
     
     return _instanceType;
@@ -77,8 +80,9 @@ static id _instanceType;
         }];
     }
 }
+
 #pragma mark
-#pragma 加载启动页广告数据
+#pragma mark 加载启动页广告数据
 -(void)getLaunchAdvertisementImageDataWithCallBack:(callBack)callBack{
     
 //    NSString*url = @"";
@@ -99,6 +103,22 @@ static id _instanceType;
     NSDictionary *params = @{};
     [self requestWithRequestType:GET url:url params:params callBack:callBack];
 }
+#pragma mark
+#pragma mark 登录注册
+-(void)loginWithPhoneNum:(NSString*)phoneNum Password:(NSString*)password CallBack:(callBack)callBack{
+    
+    NSString*url = @"http://192.168.2.111:8081/login";
+    NSDictionary *params = @{@"username":phoneNum,@"password":password};
+    [self requestWithRequestType:POST url:url params:params callBack:callBack];
+}
+-(void)registerWithPhoneNum:(NSString*)phoneNum Password:(NSString*)password CallBack:(callBack)callBack{
+    
+    NSString*url = @"http://192.168.2.111:8081/register";
+    NSDictionary *params = @{@"username":phoneNum,@"password":password};
+    [self requestWithRequestType:POST url:url params:params callBack:callBack];
+}
+
+
 #pragma mark
 #pragma mark 网络数据获取
 //认证管理页房屋认证数据列表
@@ -141,6 +161,13 @@ static id _instanceType;
 -(void)getGuessYouLikeDataWithCallBack:(callBack)callBack{
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"GuessYouLikeList" ofType:@"plist"];
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    callBack(dic,nil);
+}
+//购物车数据
+-(void)getShoppingCartDataWithCallBack:(callBack)callBack{
+
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ShoppingCartList" ofType:@"plist"];
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
     callBack(dic,nil);
 }

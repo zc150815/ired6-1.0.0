@@ -61,7 +61,7 @@
 
 -(void)titleButtonClick:(UIButton*)sender{
     sender.selected = !sender.selected;
-    SQ_NSLog(@"selected = %zd",sender.selected);
+
 }
 
 

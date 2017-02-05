@@ -23,6 +23,8 @@
 
 
 
+
+
 @end
 
 @implementation SQLoginViewController
@@ -149,18 +151,38 @@
         registerViewThree.detail = @"密码长度6-16位,只包含字母和数字";
         registerViewThree.buttonStr = @"注册";
         
-        
         [UIView animateWithDuration:0.5 animations:^{
             [_registerView setContentOffset:CGPointMake(SQ_ScreenWidth*2, 0) animated:NO];
         }];
         return;
     }
-    [UIView animateWithDuration:0.5 animations:^{
-        [self.navigationController popViewControllerAnimated:YES];
-    } completion:^(BOOL finished) {
-        [[SQPublicTools sharedPublicTools] showMessage:@"注册成功" duration:3];
-        [[SQPublicTools sharedPublicTools] loginWithUserID:@"zhangchong"];
-    }];
+    
+    
+    //注册最后一步
+    if ([nextButton.titleLabel.text isEqualToString:@"注册"]) {
+        
+        NSString *phoneNumber = [SQPublicTools sharedPublicTools].phoneNumber;
+        NSString *password = [SQPublicTools sharedPublicTools].password;
+
+        [[SQNetworkingTools sharedNetWorkingTools]registerWithPhoneNum:phoneNumber Password:password CallBack:^(id response, NSError *error) {
+            if (error) {
+                [[SQPublicTools sharedPublicTools]showMessage:@"数据获取错误" duration:3];
+                return;
+            }
+            if ([response[@"info"] isEqualToString:@"200"]) {//注册成功
+                [UIView animateWithDuration:0.5 animations:^{
+                    [self.navigationController popViewControllerAnimated:YES];
+                } completion:^(BOOL finished) {
+                    [[SQPublicTools sharedPublicTools] showMessage:@"注册成功" duration:3];
+                    [[SQPublicTools sharedPublicTools] loginWithUserID:@"zhangchong"];
+                }];
+            }else{//注册失败
+                [[SQPublicTools sharedPublicTools]showMessage:@"账户已存在,请登录" duration:3];
+            }
+
+        }];
+        
+    }
 }
 //登录页面代理方法
 -(void)loginView:(SQLoginView*)loginView withButtonClick:(UIButton*)sender{

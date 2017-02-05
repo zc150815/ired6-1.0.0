@@ -43,4 +43,11 @@ typedef void (^callBack)(id response,NSError* error);
 -(void)getRedStampsDataWithCallBack:(callBack)callBack;
 //猜你喜欢数据
 -(void)getGuessYouLikeDataWithCallBack:(callBack)callBack;
+//购物车数据
+-(void)getShoppingCartDataWithCallBack:(callBack)callBack;
+
+#pragma mark
+#pragma mark 登录注册
+-(void)loginWithPhoneNum:(NSString*)phoneNum Password:(NSString*)password CallBack:(callBack)callBack;
+-(void)registerWithPhoneNum:(NSString*)phoneNum Password:(NSString*)password CallBack:(callBack)callBack;
 @end

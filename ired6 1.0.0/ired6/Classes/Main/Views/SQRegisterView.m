@@ -109,8 +109,9 @@
 #pragma mark 按钮方法实现
 
 -(void)nextButtonClick:(UIButton*)sender{
-    [self endEditing:NO];
+    [self endEditing:YES];
     if ([_title isEqualToString:@"手机号注册"]){
+        [SQPublicTools sharedPublicTools].phoneNumber = _textField.text;
         if (_textField.text.length == 0||![[SQPublicTools sharedPublicTools]judgePhoneNumber:_textField.text]) {
             [[SQPublicTools sharedPublicTools]showMessage:@"请输入正确的手机号" duration:3];
             return;
@@ -123,6 +124,7 @@
         }
     }
     if ([_title isEqualToString:@"设置登录密码"]) {
+        [SQPublicTools sharedPublicTools].password = _textField.text;
         if (_textField.text.length == 0 || ![[SQPublicTools sharedPublicTools] judgePassword:_textField.text]) {
             [[SQPublicTools sharedPublicTools]showMessage:@"请输入正确的登录密码" duration:3];
             return;

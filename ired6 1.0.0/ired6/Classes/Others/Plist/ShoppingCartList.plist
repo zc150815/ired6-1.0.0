@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>success</key>
+	<string>1</string>
+	<key>data</key>
+	<array>
+		<dict>
+			<key>cart_id</key>
+			<string>1</string>
+			<key>store_id</key>
+			<string>1</string>
+			<key>goods_id</key>
+			<string>10</string>
+			<key>goods_image</key>
+			<string>product000</string>
+			<key>goods_name</key>
+			<string>Apple iPhone 7 Plus (A1661) 128G 黑色 移动联通电信4G手机</string>
+			<key>goods_num</key>
+			<string>1</string>
+			<key>goods_price</key>
+			<string>7199</string>
+			<key>store_name</key>
+			<string>iPhone 7</string>
+		</dict>
+		<dict>
+			<key>cart_id</key>
+			<string>3</string>
+			<key>store_id</key>
+			<string>2</string>
+			<key>goods_id</key>
+			<string>10</string>
+			<key>goods_image</key>
+			<string>product002</string>
+			<key>goods_name</key>
+			<string>苹果(Apple) iPhone SE 4G手机 深空灰 公开版(64G ROM)标配</string>
+			<key>goods_num</key>
+			<string>1</string>
+			<key>goods_price</key>
+			<string>3388</string>
+			<key>store_name</key>
+			<string>iPhone SE</string>
+		</dict>
+		<dict>
+			<key>cart_id</key>
+			<string>3</string>
+			<key>store_id</key>
+			<string>2</string>
+			<key>goods_id</key>
+			<string>10</string>
+			<key>goods_image</key>
+			<string>product001</string>
+			<key>goods_name</key>
+			<string>Apple iPhone 6s (A1700) 32G 玫瑰金色 移动联通电信4G手机</string>
+			<key>goods_num</key>
+			<string>1</string>
+			<key>goods_price</key>
+			<string>4299</string>
+			<key>store_name</key>
+			<string>iPhone 6</string>
+		</dict>
+		<dict>
+			<key>cart_id</key>
+			<string>4</string>
+			<key>store_id</key>
+			<string>2</string>
+			<key>goods_id</key>
+			<string>10</string>
+			<key>goods_image</key>
+			<string>product001</string>
+			<key>goods_name</key>
+			<string>Apple iPhone 6 (A1586) 16GB 深空灰色 移动联通电信4G手机</string>
+			<key>goods_num</key>
+			<string>1</string>
+			<key>goods_price</key>
+			<string>3299</string>
+			<key>store_name</key>
+			<string>iPhone 6</string>
+		</dict>
+		<dict>
+			<key>cart_id</key>
+			<string>1</string>
+			<key>store_id</key>
+			<string>1</string>
+			<key>goods_id</key>
+			<string>10</string>
+			<key>goods_image</key>
+			<string>product000</string>
+			<key>goods_name</key>
+			<string>Apple iPhone 7 (A1660) 32G 玫瑰金色 移动联通电信4G手机</string>
+			<key>goods_num</key>
+			<string>1</string>
+			<key>goods_price</key>
+			<string>5199</string>
+			<key>store_name</key>
+			<string>iPhone 7</string>
+		</dict>
+		<dict>
+			<key>cart_id</key>
+			<string>3</string>
+			<key>store_id</key>
+			<string>2</string>
+			<key>goods_id</key>
+			<string>10</string>
+			<key>goods_image</key>
+			<string>product002</string>
+			<key>goods_name</key>
+			<string>Apple iPhone SE (A1723) 64G 玫瑰金色 移动联通电信4G手机</string>
+			<key>goods_num</key>
+			<string>1</string>
+			<key>goods_price</key>
+			<string>3199</string>
+			<key>store_name</key>
+			<string>iPhone SE</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -39,11 +39,13 @@
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.itemSize = CGSizeMake(SQ_ScreenWidth/2, SQ_Fit(150));
         _guessView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SQ_ScreenWidth, SQ_Fit(300)) collectionViewLayout:flowLayout];
+        _guessView.bounces = NO;
         _guessView.delegate = self;
         _guessView.dataSource = self;
         _guessView.showsVerticalScrollIndicator = NO;
         _guessView.showsHorizontalScrollIndicator = NO;
         [_guessView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"guessViewID"];
+
     }
     return _guessView;
 }
@@ -60,7 +62,6 @@
     SQRedStampsHeaderView *headerView = [[SQRedStampsHeaderView alloc]initWithFrame:CGRectMake(0, 0, SQ_ScreenWidth, SQ_Fit(150))];
     headerView.backgroundColor = [UIColor getColor:@"fb4142"];
     self.tableView.tableHeaderView = headerView;
-    self.tableView.tableFooterView = self.guessView;
     
     [[SQNetworkingTools sharedNetWorkingTools]getRedStampsDataWithCallBack:^(id response, NSError *error) {
         if (error) {
@@ -73,6 +74,7 @@
             [self.tableView reloadData];
         }
     }];
+    //self.tableView.tableFooterView = self.guessView;
 }
 
 #pragma mark

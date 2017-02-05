@@ -72,7 +72,6 @@
 
 -(void)addChildViewController:(UIViewController *)childController title:(NSString*)title image:(NSString*)imageName selectedImage:(NSString*)selectedImageName{
     
-    childController.view.backgroundColor = SQ_RandomColor;
     [childController.tabBarItem setImage:[UIImage imageNamed:imageName]];
     [childController.tabBarItem setSelectedImage:[UIImage imageNamed:selectedImageName]];
     childController.tabBarItem.title = title;

@@ -13,6 +13,9 @@
 
 @property (nonatomic,assign) BOOL isLogin;
 
+@property (nonatomic,copy) NSString *phoneNumber;
+@property (nonatomic,copy) NSString *password;
+
 +(instancetype)sharedPublicTools;
 
 //登录

@@ -29,6 +29,7 @@
         _phoneNum.frame = CGRectMake(SQ_Fit(40), SQ_Fit(20), SQ_ScreenWidth-2*SQ_Fit(40), SQ_Fit(48));
         _phoneNum.leftViewStr = @"手机号";
         _phoneNum.keyboardType = UIKeyboardTypeNumberPad;
+        _phoneNum.text = @"15201453356";
         [self addSubview:_phoneNum];
         
         
@@ -39,6 +40,7 @@
         _password.keyboardType = UIKeyboardTypeDefault;
         _password.secureTextEntry = YES;
         _password.isPassword = YES;
+        _password.text = @"aaa15201453356";
         [self addSubview:_password];
         
 
@@ -101,6 +103,7 @@
 
 -(void)loginButtonAction:(DeformationButton*)sender{
     
+    [self endEditing:YES];
     if (_phoneNum.text.length == 0) {
         [[SQPublicTools sharedPublicTools]showMessage:@"请输入手机号" duration:3];
         return;
@@ -118,12 +121,31 @@
         return;
     }
     
-    [UIView animateWithDuration:1 animations:^{
-        [((UINavigationController*)((UITabBarController*)[UIApplication sharedApplication].keyWindow.rootViewController).selectedViewController) popViewControllerAnimated:YES];
-    } completion:^(BOOL finished) {
+    
+    [[SQNetworkingTools sharedNetWorkingTools]loginWithPhoneNum:_phoneNum.text Password:_password.text CallBack:^(id response, NSError *error) {
+        
+        
+        //test
         [[SQPublicTools sharedPublicTools]loginWithUserID:@"zhangchong"];
-        [[SQPublicTools sharedPublicTools]showMessage:@"登陆成功" duration:3];
+
+        if (error) {
+            [[SQPublicTools sharedPublicTools]showMessage:@"数据获取错误" duration:3];
+            SQ_NSLog(@"%@",error);
+            return;
+        }
+        if ([response[@"status"] isEqualToString:@"200"]) {
+            [UIView animateWithDuration:1 animations:^{
+                [((UINavigationController*)((UITabBarController*)[UIApplication sharedApplication].keyWindow.rootViewController).selectedViewController) popViewControllerAnimated:YES];
+            } completion:^(BOOL finished) {
+                [[SQPublicTools sharedPublicTools]loginWithUserID:@"zhangchong"];
+                [[SQPublicTools sharedPublicTools]showMessage:@"登陆成功" duration:3];
+            }];
+        }else{
+            [[SQPublicTools sharedPublicTools]showMessage:@"账号或密码错误,请重新输入" duration:3];
+        }
     }];
+    
+    
 }
 -(void)rememberButtonClick:(UIButton*)sender{
     sender.selected = !sender.selected;
