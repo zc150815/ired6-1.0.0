@@ -22,10 +22,12 @@
     if (self = [super initWithFrame:frame]) {
         
         self.backgroundColor = [UIColor whiteColor];
+        
         //选择商品btn
         UIButton *selectedBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [selectedBtn setImage:[UIImage imageNamed:@"圆圈"] forState:UIControlStateNormal];
-        [selectedBtn setImage:[UIImage imageNamed:@"打钩"] forState:UIControlStateSelected];
+        [selectedBtn setImage:[UIImage scaleFromImage:[UIImage imageNamed:@"圆圈"] toSize:CGSizeMake(SQ_Fit(15), SQ_Fit(15))] forState:UIControlStateNormal];
+        [selectedBtn setImage:[UIImage scaleFromImage:[UIImage imageNamed:@"打钩"] toSize:CGSizeMake(SQ_Fit(15), SQ_Fit(15))] forState:UIControlStateSelected];
+        selectedBtn.adjustsImageWhenHighlighted = NO;
         [selectedBtn setTitle:@"全选" forState:UIControlStateNormal];
         [selectedBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         selectedBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
@@ -40,7 +42,7 @@
         //结算btn
         _payStr = @"结算(0)";
         UIButton *payBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        payBtn.backgroundColor = SQ_RGBColor(235, 101, 158);
+        payBtn.backgroundColor = [UIColor getColor:@"fb4142"];
         payBtn.titleLabel.font = SQ_Font(SQ_Fit(13));
         [payBtn setTitle:_payStr forState:UIControlStateNormal];
         payBtn.frame = CGRectMake(frame.size.width - SQ_Fit(90), 0, SQ_Fit(90), frame.size.height);
@@ -61,7 +63,7 @@
         NSRange range = {_attAllStr.length-3, 3};
         NSRange range1 = {3, _attAllStr.length-3};
         [attStr addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:SQ_Fit(11)] range:range];
-        [attStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:range1];
+        [attStr addAttribute:NSForegroundColorAttributeName value:[UIColor getColor:@"fb4142"] range:range1];
         allPriceLabel.attributedText = attStr;
         allPriceLabel.frame = CGRectMake(CGRectGetMaxX(_selectedBtn.frame), 0, frame.size.width-CGRectGetMaxX(_selectedBtn.frame)-_payBtn.width-SQ_Fit(10), frame.size.height);
         [self addSubview:allPriceLabel];
@@ -102,7 +104,7 @@
     NSRange range = {_attAllStr.length - 3, 3};
     NSRange range1 = {3, _attAllStr.length - 3};
     [attStr addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:SQ_Fit(11)] range:range];
-    [attStr addAttribute:NSForegroundColorAttributeName value:[UIColor orangeColor] range:range1];
+    [attStr addAttribute:NSForegroundColorAttributeName value:[UIColor getColor:@"fb4142"] range:range1];
     _allPriceLabel.attributedText = attStr;
 }
 

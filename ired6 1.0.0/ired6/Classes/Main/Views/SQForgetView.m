@@ -8,7 +8,6 @@
 
 #import "SQForgetView.h"
 #import "SQTextField.h"
-#import "DeformationButton.h"
 #import "ZCKeyboard.h"
 
 @interface SQForgetView ()
@@ -17,7 +16,7 @@
 @property (nonatomic, strong) SQTextField *verification;
 @property (nonatomic, strong) UIButton *verificateBtn;
 @property (nonatomic, strong) SQTextField *password;
-@property (nonatomic, strong) DeformationButton *deformationButton;
+
 @property (nonatomic,assign) NSInteger count;
 
 @end

@@ -20,10 +20,7 @@
 		671BFB501E2338D50030DAC9 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 671BFB3F1E2338D50030DAC9 /* Foundation+Log.m */; };
 		671BFB511E2338D50030DAC9 /* NSAttributedString+ZCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 671BFB411E2338D50030DAC9 /* NSAttributedString+ZCExtension.m */; };
 		671BFB521E2338D50030DAC9 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 671BFB431E2338D50030DAC9 /* NSString+Hash.m */; };
-		671BFB531E2338D50030DAC9 /* UIBarButtonItem+ZCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 671BFB451E2338D50030DAC9 /* UIBarButtonItem+ZCExtension.m */; };
 		671BFB541E2338D50030DAC9 /* UIButton+ZCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 671BFB471E2338D50030DAC9 /* UIButton+ZCExtension.m */; };
-		671BFB561E2338D50030DAC9 /* UILabel+ZCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 671BFB4B1E2338D50030DAC9 /* UILabel+ZCExtension.m */; };
-		671BFB571E2338D50030DAC9 /* UITextField+ZCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 671BFB4D1E2338D50030DAC9 /* UITextField+ZCExtension.m */; };
 		671BFB581E2338D50030DAC9 /* UIView+ZCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 671BFB4F1E2338D50030DAC9 /* UIView+ZCExtension.m */; };
 		671BFB681E234ECC0030DAC9 /* SQLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671BFB671E234ECC0030DAC9 /* SQLoginViewController.m */; };
 		671BFB6F1E24750F0030DAC9 /* SQPublicTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 671BFB6E1E24750F0030DAC9 /* SQPublicTools.m */; };
@@ -34,9 +31,6 @@
 		6730A2271E30506800616C70 /* SQHousingCertificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6730A2261E30506800616C70 /* SQHousingCertificationController.m */; };
 		673C20ED1E41E068004A7410 /* SQMyOrderButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 673C20EA1E41E068004A7410 /* SQMyOrderButton.m */; };
 		673C20EE1E41E068004A7410 /* SQMyOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 673C20EC1E41E068004A7410 /* SQMyOrderView.m */; };
-		673C20F31E420C8C004A7410 /* OrderListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 673C20F01E420C8C004A7410 /* OrderListTableViewController.m */; };
-		673C20F41E420C8C004A7410 /* OrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 673C20F21E420C8C004A7410 /* OrderListViewController.m */; };
-		673C20F91E420CCD004A7410 /* OrderListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 673C20F71E420CCD004A7410 /* OrderListTableViewCell.m */; };
 		673C21021E445492004A7410 /* BottomPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 673C21011E445492004A7410 /* BottomPriceView.m */; };
 		673C21071E458475004A7410 /* GoodsToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 673C21061E458475004A7410 /* GoodsToolBar.m */; };
 		673C210D1E45B471004A7410 /* SQShoppingCartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 673C210C1E45B471004A7410 /* SQShoppingCartModel.m */; };
@@ -77,8 +71,6 @@
 		6775B5601E3F36A2003DF6B5 /* SQRedStampsDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775B55F1E3F36A2003DF6B5 /* SQRedStampsDetailsController.m */; };
 		6775B5631E3F3FCC003DF6B5 /* SQRedStampsDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775B5621E3F3FCC003DF6B5 /* SQRedStampsDetailCell.m */; };
 		6775B5651E3F60BC003DF6B5 /* GuessYouLikeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6775B5641E3F60BC003DF6B5 /* GuessYouLikeList.plist */; };
-		6790C5EC1E24B975007F4237 /* DeformationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6790C5E81E24B975007F4237 /* DeformationButton.m */; };
-		6790C5ED1E24B975007F4237 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6790C5EB1E24B975007F4237 /* MMMaterialDesignSpinner.m */; };
 		6790C5F01E24BB9F007F4237 /* UIColor+ZCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6790C5EF1E24BB9F007F4237 /* UIColor+ZCExtension.m */; };
 		6790C5F31E24C2E7007F4237 /* SQTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6790C5F21E24C2E7007F4237 /* SQTextField.m */; };
 		6790C5F61E25B7EE007F4237 /* SQRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6790C5F51E25B7EE007F4237 /* SQRegisterView.m */; };
@@ -87,6 +79,25 @@
 		6790C5FF1E270B61007F4237 /* SQNetworkingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 6790C5FE1E270B61007F4237 /* SQNetworkingTools.m */; };
 		67E601D61E45C1C100C01A7D /* SQShoppingCartShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E601D51E45C1C100C01A7D /* SQShoppingCartShopCell.m */; };
 		67E601D91E45C1D100C01A7D /* SQShoppingCartGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E601D81E45C1D100C01A7D /* SQShoppingCartGoodsCell.m */; };
+		67E601DC1E4859A100C01A7D /* UIImage+ZCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E601DB1E4859A100C01A7D /* UIImage+ZCExtension.m */; };
+		67E601DF1E49671900C01A7D /* GoodsClassificationList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67E601DE1E49671900C01A7D /* GoodsClassificationList.plist */; };
+		67E601E21E49689A00C01A7D /* SQGoodsClassificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E601E11E49689A00C01A7D /* SQGoodsClassificationController.m */; };
+		67E601E61E496A9C00C01A7D /* SQGoodsClassificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E601E51E496A9C00C01A7D /* SQGoodsClassificationModel.m */; };
+		67E601EA1E49798A00C01A7D /* SQTopCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E601E91E49798A00C01A7D /* SQTopCategoryCell.m */; };
+		67E601F01E4ABB9400C01A7D /* OrderTypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67E601EF1E4ABB9400C01A7D /* OrderTypeList.plist */; };
+		67E601F31E4AC19200C01A7D /* SQOrderTypeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E601F21E4AC19200C01A7D /* SQOrderTypeListModel.m */; };
+		67E601F71E4AC32200C01A7D /* SQOrderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E601F61E4AC32200C01A7D /* SQOrderController.m */; };
+		67E601FA1E4AC52600C01A7D /* SQOrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E601F91E4AC52600C01A7D /* SQOrderListController.m */; };
+		67E601FD1E4ACA6800C01A7D /* SQOrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E601FC1E4ACA6800C01A7D /* SQOrderListCell.m */; };
+		67E602001E4BF4FE00C01A7D /* SQThirdCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E601FF1E4BF4FE00C01A7D /* SQThirdCategoryCell.m */; };
+		67E602031E4C015000C01A7D /* SQThirdCategoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E602021E4C015000C01A7D /* SQThirdCategoryButton.m */; };
+		67E602091E4C1EA900C01A7D /* GridListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E602081E4C1EA900C01A7D /* GridListModel.m */; };
+		67E6020F1E4C1EDE00C01A7D /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E6020E1E4C1EDE00C01A7D /* NSObject+Property.m */; };
+		67E602111E4C1FEC00C01A7D /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = 67E602101E4C1FEC00C01A7D /* product.json */; };
+		67E602171E4C340200C01A7D /* SQGoodsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E602161E4C340200C01A7D /* SQGoodsListController.m */; };
+		67E6021D1E4C356C00C01A7D /* SQGoodsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E6021C1E4C356C00C01A7D /* SQGoodsListCell.m */; };
+		67E602231E4C36A600C01A7D /* SQGoodsDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E602221E4C36A600C01A7D /* SQGoodsDetailsController.m */; };
+		67E602261E4C476400C01A7D /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E602251E4C476400C01A7D /* UINavigationBar+Awesome.m */; };
 		67E942C41E2716C1007D5637 /* ScanSuccessJumpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E942B41E2716C1007D5637 /* ScanSuccessJumpVC.m */; };
 		67E942C51E2716C1007D5637 /* SGGenerateQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E942B61E2716C1007D5637 /* SGGenerateQRCodeVC.m */; };
 		67E942C61E2716C1007D5637 /* SGScanningQRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E942B81E2716C1007D5637 /* SGScanningQRCodeVC.m */; };
@@ -142,14 +153,8 @@
 		671BFB411E2338D50030DAC9 /* NSAttributedString+ZCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+ZCExtension.m"; sourceTree = "<group>"; };
 		671BFB421E2338D50030DAC9 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		671BFB431E2338D50030DAC9 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
-		671BFB441E2338D50030DAC9 /* UIBarButtonItem+ZCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ZCExtension.h"; sourceTree = "<group>"; };
-		671BFB451E2338D50030DAC9 /* UIBarButtonItem+ZCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ZCExtension.m"; sourceTree = "<group>"; };
 		671BFB461E2338D50030DAC9 /* UIButton+ZCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZCExtension.h"; sourceTree = "<group>"; };
 		671BFB471E2338D50030DAC9 /* UIButton+ZCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZCExtension.m"; sourceTree = "<group>"; };
-		671BFB4A1E2338D50030DAC9 /* UILabel+ZCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ZCExtension.h"; sourceTree = "<group>"; };
-		671BFB4B1E2338D50030DAC9 /* UILabel+ZCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ZCExtension.m"; sourceTree = "<group>"; };
-		671BFB4C1E2338D50030DAC9 /* UITextField+ZCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ZCExtension.h"; sourceTree = "<group>"; };
-		671BFB4D1E2338D50030DAC9 /* UITextField+ZCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ZCExtension.m"; sourceTree = "<group>"; };
 		671BFB4E1E2338D50030DAC9 /* UIView+ZCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCExtension.h"; sourceTree = "<group>"; };
 		671BFB4F1E2338D50030DAC9 /* UIView+ZCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZCExtension.m"; sourceTree = "<group>"; };
 		671BFB621E23392A0030DAC9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -171,12 +176,6 @@
 		673C20EA1E41E068004A7410 /* SQMyOrderButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQMyOrderButton.m; sourceTree = "<group>"; };
 		673C20EB1E41E068004A7410 /* SQMyOrderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQMyOrderView.h; sourceTree = "<group>"; };
 		673C20EC1E41E068004A7410 /* SQMyOrderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQMyOrderView.m; sourceTree = "<group>"; };
-		673C20EF1E420C8C004A7410 /* OrderListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListTableViewController.h; sourceTree = "<group>"; };
-		673C20F01E420C8C004A7410 /* OrderListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListTableViewController.m; sourceTree = "<group>"; };
-		673C20F11E420C8C004A7410 /* OrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListViewController.h; sourceTree = "<group>"; };
-		673C20F21E420C8C004A7410 /* OrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListViewController.m; sourceTree = "<group>"; };
-		673C20F61E420CCD004A7410 /* OrderListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListTableViewCell.h; sourceTree = "<group>"; };
-		673C20F71E420CCD004A7410 /* OrderListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListTableViewCell.m; sourceTree = "<group>"; };
 		673C21001E445492004A7410 /* BottomPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomPriceView.h; sourceTree = "<group>"; };
 		673C21011E445492004A7410 /* BottomPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomPriceView.m; sourceTree = "<group>"; };
 		673C21051E458475004A7410 /* GoodsToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsToolBar.h; sourceTree = "<group>"; };
@@ -243,10 +242,6 @@
 		6775B5611E3F3FCC003DF6B5 /* SQRedStampsDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQRedStampsDetailCell.h; sourceTree = "<group>"; };
 		6775B5621E3F3FCC003DF6B5 /* SQRedStampsDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQRedStampsDetailCell.m; sourceTree = "<group>"; };
 		6775B5641E3F60BC003DF6B5 /* GuessYouLikeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GuessYouLikeList.plist; sourceTree = "<group>"; };
-		6790C5E71E24B975007F4237 /* DeformationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeformationButton.h; sourceTree = "<group>"; };
-		6790C5E81E24B975007F4237 /* DeformationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeformationButton.m; sourceTree = "<group>"; };
-		6790C5EA1E24B975007F4237 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
-		6790C5EB1E24B975007F4237 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
 		6790C5EE1E24BB9F007F4237 /* UIColor+ZCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZCExtension.h"; sourceTree = "<group>"; };
 		6790C5EF1E24BB9F007F4237 /* UIColor+ZCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZCExtension.m"; sourceTree = "<group>"; };
 		6790C5F11E24C2E7007F4237 /* SQTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQTextField.h; sourceTree = "<group>"; };
@@ -263,6 +258,45 @@
 		67E601D51E45C1C100C01A7D /* SQShoppingCartShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQShoppingCartShopCell.m; sourceTree = "<group>"; };
 		67E601D71E45C1D100C01A7D /* SQShoppingCartGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQShoppingCartGoodsCell.h; sourceTree = "<group>"; };
 		67E601D81E45C1D100C01A7D /* SQShoppingCartGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQShoppingCartGoodsCell.m; sourceTree = "<group>"; };
+		67E601DA1E4859A100C01A7D /* UIImage+ZCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZCExtension.h"; sourceTree = "<group>"; };
+		67E601DB1E4859A100C01A7D /* UIImage+ZCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZCExtension.m"; sourceTree = "<group>"; };
+		67E601DE1E49671900C01A7D /* GoodsClassificationList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoodsClassificationList.plist; sourceTree = "<group>"; };
+		67E601E01E49689A00C01A7D /* SQGoodsClassificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGoodsClassificationController.h; sourceTree = "<group>"; };
+		67E601E11E49689A00C01A7D /* SQGoodsClassificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQGoodsClassificationController.m; sourceTree = "<group>"; };
+		67E601E41E496A9C00C01A7D /* SQGoodsClassificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGoodsClassificationModel.h; sourceTree = "<group>"; };
+		67E601E51E496A9C00C01A7D /* SQGoodsClassificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQGoodsClassificationModel.m; sourceTree = "<group>"; };
+		67E601E81E49798A00C01A7D /* SQTopCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQTopCategoryCell.h; sourceTree = "<group>"; };
+		67E601E91E49798A00C01A7D /* SQTopCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQTopCategoryCell.m; sourceTree = "<group>"; };
+		67E601EF1E4ABB9400C01A7D /* OrderTypeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OrderTypeList.plist; sourceTree = "<group>"; };
+		67E601F11E4AC19200C01A7D /* SQOrderTypeListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQOrderTypeListModel.h; sourceTree = "<group>"; };
+		67E601F21E4AC19200C01A7D /* SQOrderTypeListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQOrderTypeListModel.m; sourceTree = "<group>"; };
+		67E601F51E4AC32200C01A7D /* SQOrderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQOrderController.h; sourceTree = "<group>"; };
+		67E601F61E4AC32200C01A7D /* SQOrderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQOrderController.m; sourceTree = "<group>"; };
+		67E601F81E4AC52500C01A7D /* SQOrderListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQOrderListController.h; sourceTree = "<group>"; };
+		67E601F91E4AC52600C01A7D /* SQOrderListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQOrderListController.m; sourceTree = "<group>"; };
+		67E601FB1E4ACA6800C01A7D /* SQOrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQOrderListCell.h; sourceTree = "<group>"; };
+		67E601FC1E4ACA6800C01A7D /* SQOrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQOrderListCell.m; sourceTree = "<group>"; };
+		67E601FE1E4BF4FE00C01A7D /* SQThirdCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQThirdCategoryCell.h; sourceTree = "<group>"; };
+		67E601FF1E4BF4FE00C01A7D /* SQThirdCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQThirdCategoryCell.m; sourceTree = "<group>"; };
+		67E602011E4C015000C01A7D /* SQThirdCategoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQThirdCategoryButton.h; sourceTree = "<group>"; };
+		67E602021E4C015000C01A7D /* SQThirdCategoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQThirdCategoryButton.m; sourceTree = "<group>"; };
+		67E602071E4C1EA900C01A7D /* GridListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridListModel.h; sourceTree = "<group>"; };
+		67E602081E4C1EA900C01A7D /* GridListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridListModel.m; sourceTree = "<group>"; };
+		67E6020D1E4C1EDE00C01A7D /* NSObject+Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Property.h"; sourceTree = "<group>"; };
+		67E6020E1E4C1EDE00C01A7D /* NSObject+Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Property.m"; sourceTree = "<group>"; };
+		67E602101E4C1FEC00C01A7D /* product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = product.json; sourceTree = "<group>"; };
+		67E602151E4C340200C01A7D /* SQGoodsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGoodsListController.h; sourceTree = "<group>"; };
+		67E602161E4C340200C01A7D /* SQGoodsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQGoodsListController.m; sourceTree = "<group>"; };
+		67E6021B1E4C356C00C01A7D /* SQGoodsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGoodsListCell.h; sourceTree = "<group>"; };
+		67E6021C1E4C356C00C01A7D /* SQGoodsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQGoodsListCell.m; sourceTree = "<group>"; };
+		67E602211E4C36A600C01A7D /* SQGoodsDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGoodsDetailsController.h; sourceTree = "<group>"; };
+		67E602221E4C36A600C01A7D /* SQGoodsDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQGoodsDetailsController.m; sourceTree = "<group>"; };
+		67E602241E4C476400C01A7D /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		67E602251E4C476400C01A7D /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		67E602271E4DBBBA00C01A7D /* SQThirdHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQThirdHeader.h; sourceTree = "<group>"; };
+		67E602281E4DBC0F00C01A7D /* SQToolsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQToolsHeader.h; sourceTree = "<group>"; };
+		67E602291E4DBC5B00C01A7D /* SQMacroHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQMacroHeader.h; sourceTree = "<group>"; };
+		67E6022A1E4DBCC000C01A7D /* SQNetworkingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQNetworkingHeader.h; sourceTree = "<group>"; };
 		67E942B31E2716C1007D5637 /* ScanSuccessJumpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanSuccessJumpVC.h; sourceTree = "<group>"; };
 		67E942B41E2716C1007D5637 /* ScanSuccessJumpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanSuccessJumpVC.m; sourceTree = "<group>"; };
 		67E942B51E2716C1007D5637 /* SGGenerateQRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGenerateQRCodeVC.h; sourceTree = "<group>"; };
@@ -388,6 +422,7 @@
 			children = (
 				671BFB321E2337C70030DAC9 /* SQHomePageViewController.h */,
 				671BFB331E2337C70030DAC9 /* SQHomePageViewController.m */,
+				67E601E31E4968A100C01A7D /* GoodsClassification-商品分类 */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -395,6 +430,7 @@
 		671BFB191E23367B0030DAC9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				67E601E71E49794C00C01A7D /* GoodsClassification-商品分类 */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -402,6 +438,7 @@
 		671BFB1A1E23367B0030DAC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				67E601EB1E49799300C01A7D /* GoodsClassification-商品分类 */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -521,6 +558,7 @@
 			children = (
 				67EB81DB1E3345CB00B8D2E8 /* Attest-认证 */,
 				67EB82261E3A3BC900B8D2E8 /* RedStamps-红票 */,
+				67E601F41E4AC19D00C01A7D /* Order-订单 */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -528,6 +566,10 @@
 		671BFB261E23367B0030DAC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				673C20EB1E41E068004A7410 /* SQMyOrderView.h */,
+				673C20EC1E41E068004A7410 /* SQMyOrderView.m */,
+				673C20E91E41E068004A7410 /* SQMyOrderButton.h */,
+				673C20EA1E41E068004A7410 /* SQMyOrderButton.m */,
 				67EB81DC1E3345D700B8D2E8 /* Attest-认证 */,
 				67EB822A1E3A3BF400B8D2E8 /* RedStamps-红票 */,
 				673C20FB1E420CD3004A7410 /* Order-订单 */,
@@ -538,13 +580,13 @@
 		671BFB271E23367B0030DAC9 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				671BFB6C1E2474F10030DAC9 /* Tools */,
-				671BFB3E1E2338D50030DAC9 /* Category */,
-				67E942B01E270F55007D5637 /* Networking */,
-				6745735E1E2C9B8E00421D76 /* Plist */,
 				671BFB021E232D260030DAC9 /* AppDelegate.h */,
 				671BFB031E232D260030DAC9 /* AppDelegate.m */,
 				671BFB621E23392A0030DAC9 /* PrefixHeader.pch */,
+				671BFB6C1E2474F10030DAC9 /* Tools */,
+				671BFB3E1E2338D50030DAC9 /* Category */,
+				6745735E1E2C9B8E00421D76 /* Plist */,
+				67E601DD1E48734A00C01A7D /* Header */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -596,24 +638,24 @@
 			isa = PBXGroup;
 			children = (
 				671BFB3F1E2338D50030DAC9 /* Foundation+Log.m */,
+				67E6020D1E4C1EDE00C01A7D /* NSObject+Property.h */,
+				67E6020E1E4C1EDE00C01A7D /* NSObject+Property.m */,
 				674573411E277D4600421D76 /* CLLocation+YCLocation.h */,
 				674573421E277D4600421D76 /* CLLocation+YCLocation.m */,
 				671BFB401E2338D50030DAC9 /* NSAttributedString+ZCExtension.h */,
 				671BFB411E2338D50030DAC9 /* NSAttributedString+ZCExtension.m */,
-				671BFB421E2338D50030DAC9 /* NSString+Hash.h */,
-				671BFB431E2338D50030DAC9 /* NSString+Hash.m */,
-				671BFB441E2338D50030DAC9 /* UIBarButtonItem+ZCExtension.h */,
-				671BFB451E2338D50030DAC9 /* UIBarButtonItem+ZCExtension.m */,
 				671BFB461E2338D50030DAC9 /* UIButton+ZCExtension.h */,
 				671BFB471E2338D50030DAC9 /* UIButton+ZCExtension.m */,
 				6790C5EE1E24BB9F007F4237 /* UIColor+ZCExtension.h */,
 				6790C5EF1E24BB9F007F4237 /* UIColor+ZCExtension.m */,
-				671BFB4A1E2338D50030DAC9 /* UILabel+ZCExtension.h */,
-				671BFB4B1E2338D50030DAC9 /* UILabel+ZCExtension.m */,
-				671BFB4C1E2338D50030DAC9 /* UITextField+ZCExtension.h */,
-				671BFB4D1E2338D50030DAC9 /* UITextField+ZCExtension.m */,
 				671BFB4E1E2338D50030DAC9 /* UIView+ZCExtension.h */,
 				671BFB4F1E2338D50030DAC9 /* UIView+ZCExtension.m */,
+				67E601DA1E4859A100C01A7D /* UIImage+ZCExtension.h */,
+				67E601DB1E4859A100C01A7D /* UIImage+ZCExtension.m */,
+				671BFB421E2338D50030DAC9 /* NSString+Hash.h */,
+				671BFB431E2338D50030DAC9 /* NSString+Hash.m */,
+				67E602241E4C476400C01A7D /* UINavigationBar+Awesome.h */,
+				67E602251E4C476400C01A7D /* UINavigationBar+Awesome.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -621,11 +663,9 @@
 		671BFB6C1E2474F10030DAC9 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				6767AED61E2E1CE800822AD9 /* Network */,
 				6767AEB11E2E1C9500822AD9 /* XHLaunchAd */,
 				674573541E2B2FAE00421D76 /* Keyboard */,
 				67E942B11E2716C1007D5637 /* SGQRCode */,
-				6790C5E61E24B975007F4237 /* DeformationButton */,
 				671BFB6D1E24750F0030DAC9 /* SQPublicTools.h */,
 				671BFB6E1E24750F0030DAC9 /* SQPublicTools.m */,
 				6790C5FD1E270B61007F4237 /* SQNetworkingTools.h */,
@@ -656,10 +696,10 @@
 		673C20F51E420C91004A7410 /* Order-订单 */ = {
 			isa = PBXGroup;
 			children = (
-				673C20F11E420C8C004A7410 /* OrderListViewController.h */,
-				673C20F21E420C8C004A7410 /* OrderListViewController.m */,
-				673C20EF1E420C8C004A7410 /* OrderListTableViewController.h */,
-				673C20F01E420C8C004A7410 /* OrderListTableViewController.m */,
+				67E601F51E4AC32200C01A7D /* SQOrderController.h */,
+				67E601F61E4AC32200C01A7D /* SQOrderController.m */,
+				67E601F81E4AC52500C01A7D /* SQOrderListController.h */,
+				67E601F91E4AC52600C01A7D /* SQOrderListController.m */,
 			);
 			name = "Order-订单";
 			sourceTree = "<group>";
@@ -667,12 +707,8 @@
 		673C20FB1E420CD3004A7410 /* Order-订单 */ = {
 			isa = PBXGroup;
 			children = (
-				673C20EB1E41E068004A7410 /* SQMyOrderView.h */,
-				673C20EC1E41E068004A7410 /* SQMyOrderView.m */,
-				673C20E91E41E068004A7410 /* SQMyOrderButton.h */,
-				673C20EA1E41E068004A7410 /* SQMyOrderButton.m */,
-				673C20F61E420CCD004A7410 /* OrderListTableViewCell.h */,
-				673C20F71E420CCD004A7410 /* OrderListTableViewCell.m */,
+				67E601FB1E4ACA6800C01A7D /* SQOrderListCell.h */,
+				67E601FC1E4ACA6800C01A7D /* SQOrderListCell.m */,
 			);
 			name = "Order-订单";
 			sourceTree = "<group>";
@@ -697,6 +733,9 @@
 				6775B5591E3E06B0003DF6B5 /* RedStampsList.plist */,
 				6775B5641E3F60BC003DF6B5 /* GuessYouLikeList.plist */,
 				673C21101E45B4FB004A7410 /* ShoppingCartList.plist */,
+				67E601DE1E49671900C01A7D /* GoodsClassificationList.plist */,
+				67E601EF1E4ABB9400C01A7D /* OrderTypeList.plist */,
+				67E602101E4C1FEC00C01A7D /* product.json */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -704,6 +743,7 @@
 		6767AEB11E2E1C9500822AD9 /* XHLaunchAd */ = {
 			isa = PBXGroup;
 			children = (
+				6767AED61E2E1CE800822AD9 /* Network */,
 				6767AEB21E2E1C9500822AD9 /* NSString+XHLaunchAd.h */,
 				6767AEB31E2E1C9500822AD9 /* NSString+XHLaunchAd.m */,
 				6767AEB41E2E1C9500822AD9 /* UIImage+XHLaunchAd.h */,
@@ -739,7 +779,8 @@
 				6767AED71E2E1CE800822AD9 /* Network.h */,
 				6767AED81E2E1CE800822AD9 /* Network.m */,
 			);
-			path = Network;
+			name = Network;
+			path = ../Network;
 			sourceTree = "<group>";
 		};
 		6767AEE21E2E1E5C00822AD9 /* Source */ = {
@@ -760,30 +801,63 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		6790C5E61E24B975007F4237 /* DeformationButton */ = {
+		67E601DD1E48734A00C01A7D /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				6790C5E71E24B975007F4237 /* DeformationButton.h */,
-				6790C5E81E24B975007F4237 /* DeformationButton.m */,
-				6790C5E91E24B975007F4237 /* MMMaterialDesignSpinner-master */,
+				67E602271E4DBBBA00C01A7D /* SQThirdHeader.h */,
+				67E602281E4DBC0F00C01A7D /* SQToolsHeader.h */,
+				67E602291E4DBC5B00C01A7D /* SQMacroHeader.h */,
+				67E6022A1E4DBCC000C01A7D /* SQNetworkingHeader.h */,
 			);
-			path = DeformationButton;
+			path = Header;
 			sourceTree = "<group>";
 		};
-		6790C5E91E24B975007F4237 /* MMMaterialDesignSpinner-master */ = {
+		67E601E31E4968A100C01A7D /* GoodsClassification-商品分类 */ = {
 			isa = PBXGroup;
 			children = (
-				6790C5EA1E24B975007F4237 /* MMMaterialDesignSpinner.h */,
-				6790C5EB1E24B975007F4237 /* MMMaterialDesignSpinner.m */,
+				67E601E01E49689A00C01A7D /* SQGoodsClassificationController.h */,
+				67E601E11E49689A00C01A7D /* SQGoodsClassificationController.m */,
+				67E602151E4C340200C01A7D /* SQGoodsListController.h */,
+				67E602161E4C340200C01A7D /* SQGoodsListController.m */,
+				67E602211E4C36A600C01A7D /* SQGoodsDetailsController.h */,
+				67E602221E4C36A600C01A7D /* SQGoodsDetailsController.m */,
 			);
-			path = "MMMaterialDesignSpinner-master";
+			name = "GoodsClassification-商品分类";
 			sourceTree = "<group>";
 		};
-		67E942B01E270F55007D5637 /* Networking */ = {
+		67E601E71E49794C00C01A7D /* GoodsClassification-商品分类 */ = {
 			isa = PBXGroup;
 			children = (
+				67E601E41E496A9C00C01A7D /* SQGoodsClassificationModel.h */,
+				67E601E51E496A9C00C01A7D /* SQGoodsClassificationModel.m */,
+				67E602071E4C1EA900C01A7D /* GridListModel.h */,
+				67E602081E4C1EA900C01A7D /* GridListModel.m */,
 			);
-			path = Networking;
+			name = "GoodsClassification-商品分类";
+			sourceTree = "<group>";
+		};
+		67E601EB1E49799300C01A7D /* GoodsClassification-商品分类 */ = {
+			isa = PBXGroup;
+			children = (
+				67E601E81E49798A00C01A7D /* SQTopCategoryCell.h */,
+				67E601E91E49798A00C01A7D /* SQTopCategoryCell.m */,
+				67E601FE1E4BF4FE00C01A7D /* SQThirdCategoryCell.h */,
+				67E601FF1E4BF4FE00C01A7D /* SQThirdCategoryCell.m */,
+				67E6021B1E4C356C00C01A7D /* SQGoodsListCell.h */,
+				67E6021C1E4C356C00C01A7D /* SQGoodsListCell.m */,
+				67E602011E4C015000C01A7D /* SQThirdCategoryButton.h */,
+				67E602021E4C015000C01A7D /* SQThirdCategoryButton.m */,
+			);
+			name = "GoodsClassification-商品分类";
+			sourceTree = "<group>";
+		};
+		67E601F41E4AC19D00C01A7D /* Order-订单 */ = {
+			isa = PBXGroup;
+			children = (
+				67E601F11E4AC19200C01A7D /* SQOrderTypeListModel.h */,
+				67E601F21E4AC19200C01A7D /* SQOrderTypeListModel.m */,
+			);
+			name = "Order-订单";
 			sourceTree = "<group>";
 		};
 		67E942B11E2716C1007D5637 /* SGQRCode */ = {
@@ -998,16 +1072,19 @@
 				6767AEEE1E2E1E5C00822AD9 /* image0.jpg in Resources */,
 				671BFB0C1E232D260030DAC9 /* Assets.xcassets in Resources */,
 				67E942C81E2716C1007D5637 /* sound.caf in Resources */,
+				67E601F01E4ABB9400C01A7D /* OrderTypeList.plist in Resources */,
 				67EB81FD1E345D6300B8D2E8 /* AttestListIdentity.json in Resources */,
 				673C21111E45B4FB004A7410 /* ShoppingCartList.plist in Resources */,
 				6767AEF01E2E1E5C00822AD9 /* image11.gif in Resources */,
 				6775B55A1E3E06B0003DF6B5 /* RedStampsList.plist in Resources */,
 				6767AEF11E2E1E5C00822AD9 /* image12.gif in Resources */,
+				67E601DF1E49671900C01A7D /* GoodsClassificationList.plist in Resources */,
 				67EB81FC1E345D6300B8D2E8 /* AttestListHouse.json in Resources */,
 				6767AEF51E2E1E5C00822AD9 /* LaunchImageAd.json in Resources */,
 				6767AEF31E2E1E5C00822AD9 /* image3.jpg in Resources */,
 				6767AEF21E2E1E5C00822AD9 /* image2.jpg in Resources */,
 				6767AEF61E2E1E5C00822AD9 /* LaunchVideoAd.json in Resources */,
+				67E602111E4C1FEC00C01A7D /* product.json in Resources */,
 				67EB82011E345F9B00B8D2E8 /* AttestListIdentity.plist in Resources */,
 				67EB821B1E39EE8F00B8D2E8 /* IdentityCertification.plist in Resources */,
 				6767AEF41E2E1E5C00822AD9 /* image4.jpg in Resources */,
@@ -1071,20 +1148,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E601DC1E4859A100C01A7D /* UIImage+ZCExtension.m in Sources */,
 				671BFB541E2338D50030DAC9 /* UIButton+ZCExtension.m in Sources */,
 				67EB81D71E33402500B8D2E8 /* SQHouseCertificationCell.m in Sources */,
 				67E942C61E2716C1007D5637 /* SGScanningQRCodeVC.m in Sources */,
 				67EB82151E379B8E00B8D2E8 /* SQHouseCertificationModel.m in Sources */,
 				671BFB3A1E2337E20030DAC9 /* SQShoppingViewController.m in Sources */,
-				671BFB561E2338D50030DAC9 /* UILabel+ZCExtension.m in Sources */,
+				67E602031E4C015000C01A7D /* SQThirdCategoryButton.m in Sources */,
 				674573461E28634E00421D76 /* SQLocationViewController.m in Sources */,
 				671BFB521E2338D50030DAC9 /* NSString+Hash.m in Sources */,
-				673C20F31E420C8C004A7410 /* OrderListTableViewController.m in Sources */,
 				67E601D61E45C1C100C01A7D /* SQShoppingCartShopCell.m in Sources */,
 				67EB81C81E31A7CE00B8D2E8 /* SQAttestCell.m in Sources */,
 				6790C5FF1E270B61007F4237 /* SQNetworkingTools.m in Sources */,
+				67E602171E4C340200C01A7D /* SQGoodsListController.m in Sources */,
 				675658C71E2F597500B24595 /* AppDelegate+SQLaunchAd.m in Sources */,
 				671BFB501E2338D50030DAC9 /* Foundation+Log.m in Sources */,
+				67E601F31E4AC19200C01A7D /* SQOrderTypeListModel.m in Sources */,
 				671BFB311E2336F50030DAC9 /* SQTabBarController.m in Sources */,
 				6767AECB1E2E1C9500822AD9 /* UIImage+XHLaunchAd.m in Sources */,
 				671BFB511E2338D50030DAC9 /* NSAttributedString+ZCExtension.m in Sources */,
@@ -1095,12 +1174,14 @@
 				6775B5601E3F36A2003DF6B5 /* SQRedStampsDetailsController.m in Sources */,
 				6767AED21E2E1C9500822AD9 /* XHLaunchAdDownloader.m in Sources */,
 				671BFB041E232D260030DAC9 /* AppDelegate.m in Sources */,
+				67E601E61E496A9C00C01A7D /* SQGoodsClassificationModel.m in Sources */,
+				67E601FA1E4AC52600C01A7D /* SQOrderListController.m in Sources */,
 				6790C5F01E24BB9F007F4237 /* UIColor+ZCExtension.m in Sources */,
 				67EB82251E3A3BC500B8D2E8 /* SQRedStampsModel.m in Sources */,
-				673C20F91E420CCD004A7410 /* OrderListTableViewCell.m in Sources */,
 				671BFB581E2338D50030DAC9 /* UIView+ZCExtension.m in Sources */,
 				672602E71E2E22550078031C /* AppDelegate+XHLaunchAd.m in Sources */,
 				673C21021E445492004A7410 /* BottomPriceView.m in Sources */,
+				67E602231E4C36A600C01A7D /* SQGoodsDetailsController.m in Sources */,
 				6767AED31E2E1C9500822AD9 /* XHLaunchAdImageManager.m in Sources */,
 				671BFB371E2337D50030DAC9 /* SQLifeViewController.m in Sources */,
 				6767AECD1E2E1C9500822AD9 /* XHLaunchAd.m in Sources */,
@@ -1109,17 +1190,18 @@
 				671BFB6F1E24750F0030DAC9 /* SQPublicTools.m in Sources */,
 				672602F21E2F455D0078031C /* SQWebViewController.m in Sources */,
 				6767AED91E2E1CE800822AD9 /* Network.m in Sources */,
+				67E602091E4C1EA900C01A7D /* GridListModel.m in Sources */,
 				6775B55D1E3F310F003DF6B5 /* SQRedStampsDetailsModel.m in Sources */,
-				6790C5EC1E24B975007F4237 /* DeformationButton.m in Sources */,
 				67E601D91E45C1D100C01A7D /* SQShoppingCartGoodsCell.m in Sources */,
 				67EB82101E370DE700B8D2E8 /* SQIdentityMemberController.m in Sources */,
 				6775B5631E3F3FCC003DF6B5 /* SQRedStampsDetailCell.m in Sources */,
 				673C21071E458475004A7410 /* GoodsToolBar.m in Sources */,
 				6790C5F91E25D130007F4237 /* SQForgetView.m in Sources */,
+				67E602001E4BF4FE00C01A7D /* SQThirdCategoryCell.m in Sources */,
 				6767AECE1E2E1C9500822AD9 /* XHLaunchAdButton.m in Sources */,
 				674573391E275BA500421D76 /* DisplayView.m in Sources */,
+				67E602261E4C476400C01A7D /* UINavigationBar+Awesome.m in Sources */,
 				6745735D1E2B2FAE00421D76 /* ZCKeyboard.m in Sources */,
-				671BFB571E2338D50030DAC9 /* UITextField+ZCExtension.m in Sources */,
 				6767AECC1E2E1C9500822AD9 /* UIImageView+XHLaunchAdCache.m in Sources */,
 				671BFB011E232D260030DAC9 /* main.m in Sources */,
 				673C20EE1E41E068004A7410 /* SQMyOrderView.m in Sources */,
@@ -1128,21 +1210,22 @@
 				67EB81CB1E31AB1F00B8D2E8 /* SQAttestListModel.m in Sources */,
 				67EB81DA1E33451600B8D2E8 /* SQIdentityCertificationCell.m in Sources */,
 				673C20ED1E41E068004A7410 /* SQMyOrderButton.m in Sources */,
-				6790C5ED1E24B975007F4237 /* MMMaterialDesignSpinner.m in Sources */,
 				67EB82211E3A3ABD00B8D2E8 /* SQRedStampsController.m in Sources */,
 				67EB821E1E39F2E800B8D2E8 /* SQIdentityMemberCell.m in Sources */,
-				673C20F41E420C8C004A7410 /* OrderListViewController.m in Sources */,
-				671BFB531E2338D50030DAC9 /* UIBarButtonItem+ZCExtension.m in Sources */,
 				67E942CA1E2716C1007D5637 /* SGScanningQRCodeView.m in Sources */,
+				67E6020F1E4C1EDE00C01A7D /* NSObject+Property.m in Sources */,
 				67EB82291E3A3BF000B8D2E8 /* SQRedStampsCell.m in Sources */,
+				67E601FD1E4ACA6800C01A7D /* SQOrderListCell.m in Sources */,
 				671BFB341E2337C70030DAC9 /* SQHomePageViewController.m in Sources */,
 				6767AED51E2E1C9500822AD9 /* XHLaunchImageView.m in Sources */,
+				67E6021D1E4C356C00C01A7D /* SQGoodsListCell.m in Sources */,
 				6775B5581E3E041D003DF6B5 /* SQRedStampsHeaderView.m in Sources */,
 				6767AED01E2E1C9500822AD9 /* XHLaunchAdConfiguration.m in Sources */,
 				6767AED41E2E1C9500822AD9 /* XHLaunchAdView.m in Sources */,
 				671BFB301E2336F50030DAC9 /* SQNavigationController.m in Sources */,
 				6790C5F31E24C2E7007F4237 /* SQTextField.m in Sources */,
 				67EB81DF1E335FE000B8D2E8 /* SQHousingMemberController.m in Sources */,
+				67E601E21E49689A00C01A7D /* SQGoodsClassificationController.m in Sources */,
 				6767AECF1E2E1C9500822AD9 /* XHLaunchAdCache.m in Sources */,
 				6790C5FC1E2607FF007F4237 /* SQLoginView.m in Sources */,
 				672602EA1E2E22740078031C /* LaunchAdModel.m in Sources */,
@@ -1151,7 +1234,9 @@
 				674573491E28BD6500421D76 /* SQAttestViewController.m in Sources */,
 				67E942C51E2716C1007D5637 /* SGGenerateQRCodeVC.m in Sources */,
 				67EB81E21E33617100B8D2E8 /* SQHousingMemberCell.m in Sources */,
+				67E601F71E4AC32200C01A7D /* SQOrderController.m in Sources */,
 				67E942C71E2716C1007D5637 /* SGAlertView.m in Sources */,
+				67E601EA1E49798A00C01A7D /* SQTopCategoryCell.m in Sources */,
 				6790C5F61E25B7EE007F4237 /* SQRegisterView.m in Sources */,
 				67E942C91E2716C1007D5637 /* SGQRCodeTool.m in Sources */,
 			);

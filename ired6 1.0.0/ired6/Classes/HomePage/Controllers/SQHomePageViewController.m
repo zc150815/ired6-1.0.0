@@ -7,8 +7,11 @@
 //
 
 #import "SQHomePageViewController.h"
+#import "SQGoodsClassificationController.h"
 
 @interface SQHomePageViewController ()
+
+@property (nonatomic, strong) NSArray *testArray;
 
 @end
 
@@ -16,16 +19,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.testArray = @[@"商品分类"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return self.testArray.count;
 }
-
-
-
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    cell.textLabel.text = self.testArray[indexPath.row];
+    
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 0) {
+        SQGoodsClassificationController *GoodsClassificationVC = [[SQGoodsClassificationController alloc]init];
+        GoodsClassificationVC.title = self.testArray[indexPath.row];
+        [self.navigationController pushViewController:GoodsClassificationVC animated:YES];
+    }
+}
 
 
 @end

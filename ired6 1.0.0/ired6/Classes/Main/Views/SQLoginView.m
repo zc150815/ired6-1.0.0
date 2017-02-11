@@ -8,7 +8,6 @@
 
 #import "SQLoginView.h"
 #import "SQTextField.h"
-#import "DeformationButton.h"
 #import "ZCKeyboard.h"
 
 @interface SQLoginView ()
@@ -48,8 +47,8 @@
         UIButton *rememberBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [rememberBtn setTitle:@"记住手机号" forState:UIControlStateNormal];
         [rememberBtn setTitleColor:[UIColor getColor:@"888888"] forState:UIControlStateNormal];
-        [rememberBtn setImage:[UIImage imageNamed:@"remember-nomal"] forState:UIControlStateNormal];
-        [rememberBtn setImage:[UIImage imageNamed:@"remember-selected"] forState:UIControlStateSelected];
+        [rememberBtn setImage:[UIImage scaleFromImage:[UIImage imageNamed:@"remember-nomal"] toSize:CGSizeMake(SQ_Fit(14), SQ_Fit(14))] forState:UIControlStateNormal];
+        [rememberBtn setImage:[UIImage scaleFromImage:[UIImage imageNamed:@"remember-selected"] toSize:CGSizeMake(SQ_Fit(14), SQ_Fit(14))] forState:UIControlStateSelected];
         rememberBtn.adjustsImageWhenHighlighted = NO;
         rememberBtn.titleLabel.font = SQ_Font(SQ_Fit(12));
         rememberBtn.titleEdgeInsets = UIEdgeInsetsMake(0, SQ_Fit(10), 0, -SQ_Fit(10));
@@ -101,7 +100,7 @@
     return self;
 }
 
--(void)loginButtonAction:(DeformationButton*)sender{
+-(void)loginButtonAction:(UIButton*)sender{
     
     [self endEditing:YES];
     if (_phoneNum.text.length == 0) {

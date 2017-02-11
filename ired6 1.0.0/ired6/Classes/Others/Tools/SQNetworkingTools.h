@@ -45,6 +45,11 @@ typedef void (^callBack)(id response,NSError* error);
 -(void)getGuessYouLikeDataWithCallBack:(callBack)callBack;
 //购物车数据
 -(void)getShoppingCartDataWithCallBack:(callBack)callBack;
+//商品分类数据
+-(void)getGoodsClassificationDataWithCallBack:(callBack)callBack;
+//订单管理数据
+-(void)getOrderTypeListDataWithOrderType:(NSString*)orderType CallBack:(callBack)callBack;
+
 
 #pragma mark
 #pragma mark 登录注册

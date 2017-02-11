@@ -40,6 +40,7 @@
     
     UINavigationBar *bar = [UINavigationBar appearance];
     bar.barTintColor = [UIColor getColor:@"fb4142"];
+    bar.tintColor = [UIColor whiteColor];
     bar.translucent = NO;
     bar.shadowImage = [UIImage alloc];
     bar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor getColor:@"FFFFFF"],

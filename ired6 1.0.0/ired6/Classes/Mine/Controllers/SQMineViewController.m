@@ -10,7 +10,7 @@
 #import "SQAttestViewController.h"
 #import "SQRedStampsController.h"
 #import "SQMyOrderView.h"
-#import "OrderListViewController.h"
+#import "SQOrderController.h"
 
 @interface SQMineViewController ()<UITableViewDelegate,UITableViewDataSource,SQMyOrderViewDelegate>
 
@@ -29,7 +29,8 @@
 
 -(void)setupUI{
     
-    UITableView *mineTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SQ_ScreenWidth, SQ_ScreenHeight-70) style:UITableViewStyleGrouped];
+    self.extendedLayoutIncludesOpaqueBars = YES;
+    UITableView *mineTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SQ_ScreenWidth, SQ_ScreenHeight) style:UITableViewStyleGrouped];
     mineTableView.delegate = self;
     mineTableView.dataSource = self;
     mineTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -54,6 +55,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellcell" forIndexPath:indexPath];
+    cell.textLabel.font = SQ_Font(SQ_Fit(15));
     cell.textLabel.text = self.dataArr[indexPath.section][indexPath.row];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -104,7 +106,7 @@
 #pragma mark SQMyOrderViewDelegate代理方法
 -(void)myOrderView:(SQMyOrderView *)myOrderView myOrderButtonActiton:(UIButton *)sender{
     
-    OrderListViewController *orderList = [[OrderListViewController alloc]init];
+    SQOrderController *orderList = [[SQOrderController alloc]init];
     switch (sender.tag) {
         case 1000:
             orderList.orderListType = 1000;

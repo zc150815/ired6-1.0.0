@@ -14,7 +14,7 @@
 			<key>goods_id</key>
 			<string>10</string>
 			<key>goods_image</key>
-			<string>product000</string>
+			<string>iphone7(0)</string>
 			<key>goods_name</key>
 			<string>Apple iPhone 7 Plus (A1661) 128G 黑色 移动联通电信4G手机</string>
 			<key>goods_num</key>
@@ -32,7 +32,7 @@
 			<key>goods_id</key>
 			<string>10</string>
 			<key>goods_image</key>
-			<string>product002</string>
+			<string>iphoneSE(1)</string>
 			<key>goods_name</key>
 			<string>苹果(Apple) iPhone SE 4G手机 深空灰 公开版(64G ROM)标配</string>
 			<key>goods_num</key>
@@ -50,7 +50,7 @@
 			<key>goods_id</key>
 			<string>10</string>
 			<key>goods_image</key>
-			<string>product001</string>
+			<string>iphone6(0)</string>
 			<key>goods_name</key>
 			<string>Apple iPhone 6s (A1700) 32G 玫瑰金色 移动联通电信4G手机</string>
 			<key>goods_num</key>
@@ -68,7 +68,7 @@
 			<key>goods_id</key>
 			<string>10</string>
 			<key>goods_image</key>
-			<string>product001</string>
+			<string>iphone6(1)</string>
 			<key>goods_name</key>
 			<string>Apple iPhone 6 (A1586) 16GB 深空灰色 移动联通电信4G手机</string>
 			<key>goods_num</key>
@@ -86,7 +86,7 @@
 			<key>goods_id</key>
 			<string>10</string>
 			<key>goods_image</key>
-			<string>product000</string>
+			<string>iphone7(1)</string>
 			<key>goods_name</key>
 			<string>Apple iPhone 7 (A1660) 32G 玫瑰金色 移动联通电信4G手机</string>
 			<key>goods_num</key>
@@ -104,7 +104,7 @@
 			<key>goods_id</key>
 			<string>10</string>
 			<key>goods_image</key>
-			<string>product002</string>
+			<string>iphoneSE(0)</string>
 			<key>goods_name</key>
 			<string>Apple iPhone SE (A1723) 64G 玫瑰金色 移动联通电信4G手机</string>
 			<key>goods_num</key>

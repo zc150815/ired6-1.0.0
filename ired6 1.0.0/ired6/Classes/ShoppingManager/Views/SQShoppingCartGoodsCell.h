@@ -12,7 +12,8 @@
 
 @protocol SQShoppingCartGoodsCellDelegate <NSObject>
 
-- (void)shoppingCartGoodsCell:(SQShoppingCartGoodsCell*)cell withSelectedModel:(SQShoppingCartModel*)model;
+-(void)shoppingCartGoodsCell:(SQShoppingCartGoodsCell*)cell withSelectedModel:(SQShoppingCartModel*)model;
+-(void)shoppingCartGoodsChanged:(SQShoppingCartGoodsCell*)cell withSelectedModel:(SQShoppingCartModel*)model;
 @end
 
 

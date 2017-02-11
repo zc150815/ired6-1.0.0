@@ -24,7 +24,7 @@
     // 检测网络连接的单例,网络变化时的回调方法
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         if(status == AFNetworkReachabilityStatusNotReachable){
-            [[SQPublicTools sharedPublicTools]showMessage:@"网络连接错误，请检查您的网络！" duration:3];
+            [[SQPublicTools sharedPublicTools]showMessage:@"网络已断开！" duration:3];
             return ;
         }else if (status==AFNetworkReachabilityStatusReachableViaWWAN){
             [[SQPublicTools sharedPublicTools]showMessage:@"正在使用移动数据" duration:3];
@@ -167,8 +167,28 @@ static SQNetworkingTools* _instanceType;
 //购物车数据
 -(void)getShoppingCartDataWithCallBack:(callBack)callBack{
 
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"ShoppingCartList" ofType:@"plist"];
-    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
-    callBack(dic,nil);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"ShoppingCartList" ofType:@"plist"];
+        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+        callBack(dic,nil);
+    });
+}
+//商品分类数据
+-(void)getGoodsClassificationDataWithCallBack:(callBack)callBack{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"GoodsClassificationList" ofType:@"plist"];
+        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+        callBack(dic,nil);
+    });
+}
+//订单管理数据
+-(void)getOrderTypeListDataWithOrderType:(NSString*)orderType CallBack:(callBack)callBack{
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"OrderTypeList" ofType:@"plist"];
+        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:path];
+        callBack(dic,nil);
+    });
 }
 @end

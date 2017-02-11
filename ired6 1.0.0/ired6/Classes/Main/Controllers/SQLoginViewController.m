@@ -12,7 +12,7 @@
 #import "SQForgetView.h"
 #import "SQLoginView.h"
 #import "SQTextField.h"
-#import "DeformationButton.h"
+
 
 @interface SQLoginViewController ()<SQRegisterViewDelegate,SQLoginViewDelegate,SQForgetViewDelegate>
 

@@ -64,10 +64,10 @@
 
 -(void)setupChildController{
     
-    [self addChildViewController:[[SQHomePageViewController alloc]init] title:@"首页" image:@"main_buttom_life_off" selectedImage:@"main_buttom_life_on"];
-    [self addChildViewController:[[SQLifeViewController alloc]init] title:@"生活" image:@"main_buttom_rim_off" selectedImage:@"main_buttom_rim_on"];
-    [self addChildViewController:[[SQShoppingViewController alloc]init] title:@"购物管理" image:@"main_buttom_discover_off" selectedImage:@"main_buttom_discover_on"];
-    [self addChildViewController:[[SQMineViewController alloc]init] title:@"我的红六" image:@"main_buttom_me_off" selectedImage:@"main_buttom_me_on"];
+    [self addChildViewController:[[SQHomePageViewController alloc]init] title:@"服务站" image:@"main_buttom_life_off" selectedImage:@"main_buttom_life_on"];
+    [self addChildViewController:[[SQLifeViewController alloc]init] title:@"管家" image:@"main_buttom_rim_off" selectedImage:@"main_buttom_rim_on"];
+    [self addChildViewController:[[SQShoppingViewController alloc]init] title:@"购物车" image:@"main_buttom_discover_off" selectedImage:@"main_buttom_discover_on"];
+    [self addChildViewController:[[SQMineViewController alloc]init] title:@"我的" image:@"main_buttom_me_off" selectedImage:@"main_buttom_me_on"];
 }
 
 -(void)addChildViewController:(UIViewController *)childController title:(NSString*)title image:(NSString*)imageName selectedImage:(NSString*)selectedImageName{

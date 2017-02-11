@@ -22,7 +22,7 @@
 
 @property (nonatomic, assign) double allSum;//总价格
 
-@property (nonatomic, strong) NSArray *dataArr;//列表数据
+@property (nonatomic, strong) NSMutableArray *dataArr;//列表数据
 @property (nonatomic, strong) NSMutableArray *shopNameArray;//店铺名称数据
 @property (nonatomic, strong) NSMutableArray *selectedShopArray;//被选中店铺
 @property (nonatomic, strong) NSMutableDictionary *shopCartDic;//商品数据
@@ -41,9 +41,9 @@
 
 #pragma mark
 #pragma mark 懒加载数据
--(NSArray *)dataArr{
+-(NSMutableArray *)dataArr{
     if (!_dataArr) {
-        _dataArr = [NSArray new];
+        _dataArr = [NSMutableArray new];
         
     }
     return _dataArr;
@@ -82,12 +82,16 @@
     
     [self.selectedArray removeAllObjects];
     [self.selectedShopArray removeAllObjects];
+    [self.dataArr removeAllObjects];
     self.bottomPriceView.isSelectBtn = NO;
+    self.bottomPriceView.hidden = YES;
 
     [[SQNetworkingTools sharedNetWorkingTools]getShoppingCartDataWithCallBack:^(id response, NSError *error) {
         
         if (error) {
             [[SQPublicTools sharedPublicTools]showMessage:@"数据获取错误" duration:3];
+            [self.shoppingCart.mj_header endRefreshing];
+
             return;
         }
         if ([response isKindOfClass:[NSDictionary class]]) {
@@ -115,6 +119,7 @@
                 [self.shopCartDic setObject:array forKey:shopName];
             }
             [self.shoppingCart reloadData];
+            [self.shoppingCart.mj_header endRefreshing];
         }
     }];
 }
@@ -126,12 +131,18 @@
     UITableView *shoppingCart = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SQ_ScreenWidth, SQ_ScreenHeight) style:UITableViewStyleGrouped];
     shoppingCart.delegate = self;
     shoppingCart.dataSource = self;
-    shoppingCart.bounces = NO;
-    //shoppingCart.separatorStyle = UITableViewCellSeparatorStyleNone;
+    shoppingCart.separatorStyle = UITableViewCellSeparatorStyleNone;
     shoppingCart.showsVerticalScrollIndicator = NO;
     shoppingCart.showsHorizontalScrollIndicator = NO;
+    [shoppingCart setContentInset:UIEdgeInsetsMake(0, 0, SQ_Fit(40), 0)];
     [shoppingCart registerClass:[SQShoppingCartShopCell class] forCellReuseIdentifier:@"ShopCellID"];
     [shoppingCart registerClass:[SQShoppingCartGoodsCell class] forCellReuseIdentifier:@"GoodsCellID"];
+    
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];//下拉刷新控件
+    header.automaticallyChangeAlpha = YES;   // 设置自动切换透明度(在导航栏下面自动隐藏)
+    header.lastUpdatedTimeLabel.hidden = YES;// 隐藏时间
+    shoppingCart.mj_header = header;
+    
     [self.view addSubview:shoppingCart];
     self.shoppingCart = shoppingCart;
     
@@ -147,8 +158,8 @@
     [self.view addSubview:goodsToolBar];
     self.goodsToolBar = goodsToolBar;
     
-    // 监听通知
     
+    // 监听通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
 }
@@ -156,14 +167,19 @@
 #pragma mark UITableView代理方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
-    if (self.shopNameArray.count) {
+    if (self.shopNameArray.count != 0) {
         _bottomPriceView.hidden = NO;
+        if (!self.shoppingCart.contentInset.bottom) {
+            [self.shoppingCart setContentInset:UIEdgeInsetsMake(0, 0, SQ_Fit(40), 0)];
+        }
         return self.shopNameArray.count;
-    }else{
+    }
+    if (self.shopNameArray.count == 0) {
+      
         _bottomPriceView.hidden = YES;
-        [tableView setContentInset:UIEdgeInsetsZero];
         return 1;
     }
+    return 0;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -201,7 +217,10 @@
     }else{
         
         UITableViewCell *cell = [[UITableViewCell alloc]init];
-        cell.textLabel.text = @"空空如也/网络异常";
+        cell.textLabel.text = @"购物车空空如也\n\n快去挑几件好货吧!";
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        cell.textLabel.textColor = [UIColor lightGrayColor];
+        cell.textLabel.numberOfLines = 0;
         return cell;
     }
     
@@ -210,23 +229,104 @@
     
     if (self.shopNameArray.count) {
         if (indexPath.row == 0) {
-            return 30;
+            return SQ_Fit(30);
         }else{
-            return 100;
+            return SQ_Fit(100);
         }
     }
-    return 100;
+    return SQ_ScreenHeight/2;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 10;
+    return 0.01;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 0.01;
+    return SQ_Fit(10);
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+    if (indexPath.row == 0) {
+        [[SQPublicTools sharedPublicTools]showMessage:[NSString stringWithFormat:@"%zd-%zd",indexPath.section,indexPath.row] duration:3];
+    }else{
+        [[SQPublicTools sharedPublicTools]showMessage:[NSString stringWithFormat:@"%zd-%zd",indexPath.section,indexPath.row] duration:3];
+    }
 }
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //设置删除按钮
+    if (indexPath.row != 0) {
+        
+        UITableViewRowAction *deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除"handler:^(UITableViewRowAction *action,NSIndexPath *indexPath) {
+            //删除操作 给后台发送删除请求
+            //删除 缓存数据
+            //1.取出对应的商店的所有商品数组
+            NSMutableArray *array = [self.shopCartDic objectForKey:self.shopNameArray[indexPath.section]];
+            //2.0删除对应商品
+            SQShoppingCartModel *model = array[indexPath.row - 1];
+            [array removeObjectAtIndex:(indexPath.row - 1)];
+            //2.1删除已选中商品
+            if ([self.selectedArray containsObject:model]) {
+                [self.selectedArray removeObject:model];
+            }
+            if (array.count == 0) {
+                //删除已选中商店
+                if ([self.selectedShopArray containsObject:model.store_name]) {
+                    [self.selectedShopArray removeObject:model.store_name];
+                }
+                [self.shopCartDic removeObjectForKey:self.shopNameArray[indexPath.section]];
+                [self.shopNameArray removeObjectAtIndex:indexPath.section];
+            }else{
+                BOOL isSelect = YES;
+                [self.shopCartDic setObject:array forKey:self.shopNameArray[indexPath.section]];
+                //看该商店的所有商品是否都在已选里面
+                for (SQShoppingCartModel *temp in array) {
+                    if (![self.selectedArray containsObject:temp]) {
+                        isSelect = NO;
+                    }
+                }
+                //添加商店
+                if (isSelect) {
+                    if (![self.selectedShopArray containsObject:model.store_name]) {
+                        [self.selectedShopArray addObject:model.store_name];
+                    }
+                }
+            }
+            [self.dataArr removeObject:model];
+            //看是否全选中
+            NSSet *s1 = [[NSSet alloc]initWithArray:self.dataArr];
+            NSSet *s2 = [[NSSet alloc] initWithArray:self.selectedArray];
+            if ([s1 isEqual:s2]) {
+                self.bottomPriceView.selectedBtn.selected = YES;
+            }
+            [tableView reloadData];
+            
+            //动态更改合计、数量
+            self.allSum = 0;
+            for (SQShoppingCartModel *model in self.selectedArray) {
+                self.allSum += model.goods_price * model.goods_num;
+            }
+            _bottomPriceView.attAllStr = [NSString stringWithFormat:@"%.2f", self.allSum];
+            _bottomPriceView.payStr = [NSString stringWithFormat:@"%lu", self.selectedArray.count];
+
+        }];
+
+        return @[deleteRowAction];
+    }else{
+        return nil;
+    }
+}
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row != 0) {
+        return YES;
+    }else{
+        return NO;
+    }
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+
 #pragma mark BottomPriceView代理方法
 -(void)bottomPriceView:(BottomPriceView *)bottomView buttonClickWith:(UIButton *)sender{
     if (sender.tag == 1000) { 
@@ -344,6 +444,14 @@
     [self.shoppingCart reloadData];
 
 }
+-(void)shoppingCartGoodsChanged:(SQShoppingCartGoodsCell*)cell withSelectedModel:(SQShoppingCartModel *)model{
+    
+    self.allSum = 0;
+    for (SQShoppingCartModel *model in self.selectedArray) {
+        self.allSum += (model.goods_price * model.goods_num);
+    }
+    self.bottomPriceView.attAllStr = [NSString stringWithFormat:@"%.2f", self.allSum];
+}
 #pragma mark 监听方法
 - (void)keyboardWillChangeFrame:(NSNotification *)notification{
     NSDictionary *userInfo = notification.userInfo;
@@ -361,4 +469,7 @@
     }];
 }
 
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 @end

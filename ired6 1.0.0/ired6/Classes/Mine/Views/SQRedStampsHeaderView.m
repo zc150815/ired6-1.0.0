@@ -100,7 +100,8 @@
 -(void)viewBtnClick:(UITapGestureRecognizer*)tapGesture{
     
     UIView *BtnView = tapGesture.view;
-
+    
+    SQ_NSLog(@"%zd",BtnView.tag);
     
 }
 @end

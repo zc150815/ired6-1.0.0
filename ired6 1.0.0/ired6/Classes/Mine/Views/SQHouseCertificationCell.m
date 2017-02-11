@@ -83,8 +83,9 @@
     _memberModel = memberModel;
     
     if (memberModel.canSelected) {
-        [_titleBtn setImage:[UIImage imageNamed:@"remember-nomal"] forState:UIControlStateNormal];
-        [_titleBtn setImage:[UIImage imageNamed:@"remember-selected"] forState:UIControlStateSelected];
+       
+        [_titleBtn setImage:[UIImage scaleFromImage:[UIImage imageNamed:@"remember-nomal"] toSize:CGSizeMake(SQ_Fit(14), SQ_Fit(14))] forState:UIControlStateNormal];
+        [_titleBtn setImage:[UIImage scaleFromImage:[UIImage imageNamed:@"remember-selected"] toSize:CGSizeMake(SQ_Fit(14), SQ_Fit(14))] forState:UIControlStateSelected];
     }
     [_titleBtn setTitle:memberModel.item forState:UIControlStateNormal];
     if (memberModel.show) {

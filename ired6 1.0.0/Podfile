@@ -8,6 +8,7 @@ target 'ired6' do
 
 pod 'AFNetworking'
 pod 'MJExtension'
-
-
+pod 'MJRefresh'
+pod 'SVProgressHUD'
+pod 'SDWebImage'
 end
